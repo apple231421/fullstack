@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+</head>
+
+<style>
+    td {text-align: center;}
+    table {
+        /* border(테두리):선두께 선종류 선색상*/
+        /* border-collapse는 하나의 테두리로 통합시켜준다. */
+        border: 1px solid black;
+        border-collapse:collapse;
+    }
+    td  {
+        border: 1px solid black;
+        /* padding 글자 기준 상하좌우로 10px만큼 커짐 */
+        padding: 10px;
+    }
+</style>
+
+<body>
+    <table>
+        <!-- tr은 행이고 td는 열을 의미한다 -->
+        <!-- rowspan tr을 합칠때 사용 (tr을 합치려면 선을 넘어야됨)-->
+        <!-- colspan td을 합칠때 사용  -->
+        <tr>
+            <td rowspan="2">과목/난이도</td>
+            <td colspan="2">html / css</td>
+            
+            <td colspan="2">javaScript / Jquery</td>
+            
+        </tr>
+        <tr>
+            
+            <td>쉽고</td>
+            <td>재미있고</td>
+            <td>어렵고</td>
+            <td>신기하다.</td>
+        </tr> 
+    </table>
+</body>
+</html>

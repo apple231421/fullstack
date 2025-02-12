@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .logo{
+            width: 200px;
+            height: 150px;
+            float: left;
+            background-color: yellowgreen;
+            margin-top: 20px;
+            margin-left: 50px;
+        }
+        nav ul{
+            list-style: none;
+            width: 800px;
+            height: 60px;
+            margin-top: 110px;
+            margin-left: 20px;
+            background-color: yellowgreen;
+            float: left;
+        }
+        
+        nav ul li{
+            float: left;  
+        }
+        nav ul li a{
+            /* a글자색 회색 밑줄 없음 */
+            color: black;
+            text-decoration: none;
+            /* a 인라인요소 (넓이 x 높이 x ->블럭요소로 바꿈) */
+            display: block;
+            width: 50px;
+            height: 20px;
+            background-color: yellowgreen;
+            margin-top: 20px;
+            margin-left: 100px;
+        }
+        .container {
+            width: 1200px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        header {
+            height: 200px;
+            background-color: darkgreen;
+        }
+
+        section {
+            margin-top: 20px;
+            height: 600px;
+            background-color: darkgreen;
+        }
+
+        .left_box{
+            width: 780px;
+            height: 570px;
+            background-color: darkgreen;
+            margin-left: 15px;
+            margin-top: 15px;
+            float: left;
+        }
+        .left1{
+            background-color: yellowgreen;
+            width: 370px;
+            height: 570px;
+            float: left;
+        }
+        .right1{
+            background-color: yellowgreen;
+            float: left;
+            width: 370px;
+            height: 570px;
+            margin-left: 40px;
+        }
+        .right_box{
+            background-color: darkgreen;
+            width: 350px;
+            height: 570px;
+            margin-top: 15px;
+            margin-left: 30px;
+            float: left;
+        }
+        .top1{
+            background-color: yellowgreen;
+            float: left;
+            width: 350px;
+            height: 270px;
+            float: left;
+        }
+        .bottom1{
+            background-color: yellowgreen;
+            float: left;
+            width: 350px;
+            height: 270px;
+            margin-top: 30px;
+            float: left;
+        }
+        footer {
+            margin-top: 10px;
+            height: 80px;
+            background-color: darkgreen;
+            padding-top: 10px;
+        }
+        .footer_t{
+            border-top: 1px solid transparent;
+            background-color: yellowgreen;
+            width: 500px;
+            height:25px;
+            margin-left: 150px;
+        }
+        .footer_b{
+            border-top: 1px solid transparent;
+            background-color: yellowgreen;
+            width: 500px;
+            height:25px;
+            margin-left: 150px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo"><a href="#">logo</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Menu1</a></li>
+                    <li><a href="#">Menu2</a></li>
+                    <li><a href="#">Menu3</a></li>
+                    <li><a href="#">Menu4</a></li>
+                    <li><a href="#">Menu5</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <article class="left_box">
+                <div class="left1">콘텐츠 그룹1</div>
+                <div class="right1">콘텐츠 그룹2</div>
+            </article>
+            <article class="right_box">
+                <div class="top1">주요기사</div>
+                <div class="bottom1">광고</div>
+            </article>
+        </section>
+
+        <footer>
+            <div class="footer_t">
+                경기도 부천시 오청구 삼정동 032-674-5685   sadasd@naver.com
+            </div>
+            <div class="footer_b">
+                copyright ⓒ All rights reserved.
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

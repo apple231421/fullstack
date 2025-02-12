@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    legend{
+        text-align: center;
+    }
+</style>
+<body>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>회원가입</legend>
+            <!-- textarea태그는 여러 줄 텍스트 입력상자 태그 -->
+            <p>가입목적 : <br> <textarea rows="5" cols="100"></textarea></p>
+            <p>전화번호 : 
+                <!-- select태그는 선택 목록 상자 태그이다 -->
+                <select>
+                    <option>지역번호</option>
+                    <option selected="selected">02</option>
+                    <option >031</option>
+                    <option >044</option>
+                </select>
+                <input type="text">
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>
