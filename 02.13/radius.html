@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        nav {
+            background-color: rgb(24, 121, 92);
+            width: 800px;
+            height: 70px;
+            margin: 0 auto;
+            padding-top: 16px;
+        }
+
+        nav>ul {
+            width: 600px;
+            height: 50px;
+            background-color: rgb(183, 223, 119);
+            margin: 0 auto;
+            list-style: none;
+        }
+
+        nav ul li {
+            /* 메인 메뉴를 왼쪽으로 정렬 */
+            float: left;
+            margin-left: 25px;
+        }
+
+        /* li에 회사소개를 뜻함 */
+        nav ul li:nth-child(1) a{
+            border-top-left-radius: 25px;
+        }
+
+        nav ul li:nth-child(1) a{
+            border-top-right-radius: 25px;
+        }
+
+        nav ul li:nth-child(2) a{
+            border-radius: 25px;
+        }
+
+        /* 0 0 25px 25px 왼쪽상단부터 시계방향으로 값을 줄수있다 */
+        nav ul li:nth-child(3) a{
+            border-radius: 0 0 25px 25px;
+        }
+
+        nav ul li:nth-child(4) a{
+            border-radius: 25px 0 0 25px;
+        }
+
+        nav ul li a {
+            display: block;
+            width: 120px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            color: #ffffff;
+            text-decoration: none;
+            background-color: rgb(72, 34, 107);
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">제품소개</a></li>
+            <li><a href="#">커뮤니티</a></li>
+            <li><a href="#">다운로드</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>

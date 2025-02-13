@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        header {
+            background-color: rgb(112, 23, 82);
+            height: 100px;
+        }
+
+        header h1.logo {
+            width: 200px;
+            height: 100px;
+            float: left;
+        }
+
+        header nav {
+            width: 600px;
+            height: 50px;
+            background-color: yellow;
+            float: right;
+            margin-top: 40px;
+            margin-right: 10px;
+        }
+        nav ul{
+            /* 메뉴 옆에 ● 없에줌*/
+            list-style: none;
+        }
+
+        nav ul li{
+            /* 메뉴를 옆으로 만들어줌 */
+            float: left;
+        }
+        nav ul li a{
+            /* a는 인라인요소이므로 넓이 높이가 적용이 안됨
+            그래서 display : block으로 강제로 블록요소로 바꿈*/
+            display: block;
+
+            width: 150px;
+            height: 50px;
+
+            /* 높이랑 같은 값을 주면 중앙에 위치 */
+            line-height: 50px;
+            text-align: center;
+
+            /* 밑줄삭제 */
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* : hover 는 마우스를 올렸을때 효과 */
+        nav ul li a:hover{
+            background-color: #333;
+            color: white;
+        }
+
+        .img_slider {
+            background-color: #ccc;
+            height: 300px;
+        }
+
+        section {
+            background-color: burlywood;
+            height: 300px;
+        }
+
+        section article {
+            width: 400px;
+            height: 300px;
+            float: left;
+        }
+
+        /* section 아래(자식) article이면서 notice인 */
+        section article.notice {
+            background-color: plum;
+        }
+
+        section article.banner {
+            background-color: aqua;
+        }
+
+        section article.icons {
+            background-color: violet;
+        }
+
+
+        footer {
+            background-color: #333;
+            height: 100px;
+            color: #fff;
+        }
+
+        footer .foot_logo {
+            width: 200px;
+            background-color: indianred;
+            height: 100px;
+            float: left;
+        }
+
+        footer .foot_right {
+            width: 1000px;
+            background-color: lightblue;
+            height: 100px;
+            float: left;
+        }
+
+        .foot_right .foot_menu {
+            height: 50px;
+            background-color: lightgreen;
+        }
+
+        .foot_right .foot_copy {
+            height: 50px;
+            background-color: orange;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">
+                <img src="images/logo.png" alt="로고">
+            </h1>
+
+            <nav>
+                <ul>
+                    <li><a href="#">Menu1</a></li>
+                    <li><a href="#">Menu2</a></li>
+                    <li><a href="#">Menu3</a></li>
+                    <li><a href="#">Menu4</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <div class="img_slider">
+            <img src="images/slide1.jpg" alt="슬라이더1">
+        </div>
+
+        <section>
+            <article class="notice">공지사항</article>
+            <article class="banner">배너</article>
+            <article class="icons">아이콘들</article>
+        </section>
+
+        <footer>
+            <div class="foot_logo"></div>
+            <div class="foot_right">
+                <div class="foot_menu">메뉴</div>
+                <div class="foot_copy">address</div>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>

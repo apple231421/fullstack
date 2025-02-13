@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        nav {
+            background-color: aqua;
+            width: 600px;
+            height: 100px;
+            
+        }
+
+        nav ul {
+            list-style: none;
+        }
+        nav>ul>li {
+            float: left;
+        }
+
+        nav ul li a {
+            width: 150px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            display: block;
+            text-decoration: none;
+            
+        }
+
+        nav ul li ul {
+            display: none;
+            color: aliceblue;
+        }
+
+        nav ul li:hover ul {
+            display: block;
+            background-color: rgb(154, 154, 248);
+        }
+    </style>
+</head>
+
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Menu1</a>
+                <ul>
+                    <li><a href="#">Submenu1</a></li>
+                    <li><a href="#">Submenu2</a></li>
+                    <li><a href="#">Submenu3</a></li>
+                    <li><a href="#">Submenu4</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Menu2</a>
+                <ul>
+                    <li><a href="#">Submenu1</a></li>
+                    <li><a href="#">Submenu2</a></li>
+                    <li><a href="#">Submenu3</a></li>
+                    <li><a href="#">Submenu4</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Menu3</a>
+                <ul>
+                    <li><a href="#">Submenu1</a></li>
+                    <li><a href="#">Submenu2</a></li>
+                    <li><a href="#">Submenu3</a></li>
+                    <li><a href="#">Submenu4</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Menu4</a>
+                <ul>
+                    <li><a href="#">Submenu1</a></li>
+                    <li><a href="#">Submenu2</a></li>
+                    <li><a href="#">Submenu3</a></li>
+                    <li><a href="#">Submenu4</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+
+</html>

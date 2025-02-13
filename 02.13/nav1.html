@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        /* 전체적인 메뉴판 정보 */
+        nav {
+            background-color: aqua;
+            width: 600px;
+            height: 50px;
+            
+            /* 가운데 정렬 */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        nav ul{
+            /* 메뉴판 앞에 ●없에줌 */
+            list-style: none;
+        }
+        
+        /* 메인 메뉴판을 왼쪽으로 정렬 */
+        nav>ul>li {
+            float: left;
+        }
+
+        nav ul li a {
+            width: 150px;
+            height: 50px;
+            line-height: 50px;
+
+            /* 강제로 블록으로 만들어줌 블록 취급으로 안해주면 메뉴가 따닥따닥 붙어있음*/
+            display: block;
+
+            text-align: center;
+            color: #333;
+
+            /* 밑줄없에줌 */
+            text-decoration: none;
+        }
+
+        /* 서브 메뉴 노선? */
+        nav ul li ul{
+            /* 서브 메뉴를 가려줌 */
+            display: none;
+        }
+
+        /* hover의 위치에 따라서 보여주는 것이 달라짐 li:hover일 경우 
+        메인 메뉴하나에 마우스를 올려둘시 그 메인 메뉴의 서브메뉴만 보임 
+        ul:hover일 경우에는 메인 메뉴 어디에올리던지 서브메뉴전체가 다보임*/
+        nav ul li:hover ul{
+            /* 서브 메뉴를 보여줌 */
+            display: block;
+            background-color: aqua;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Menu1</a>
+                <ul>
+                    <li><a href="#">Submenu1</a></li>
+                    <li><a href="#">Submenu2</a></li>
+                    <li><a href="#">Submenu3</a></li>
+                    <li><a href="#">Submenu4</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Menu2</a>
+                <ul>
+                    <li><a href="#">Submenu1</a></li>
+                    <li><a href="#">Submenu2</a></li>
+                    <li><a href="#">Submenu3</a></li>
+                    <li><a href="#">Submenu4</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Menu3</a>
+                <ul>
+                    <li><a href="#">Submenu1</a></li>
+                    <li><a href="#">Submenu2</a></li>
+                    <li><a href="#">Submenu3</a></li>
+                    <li><a href="#">Submenu4</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Menu4</a>
+                <ul>
+                    <li><a href="#">Submenu1</a></li>
+                    <li><a href="#">Submenu2</a></li>
+                    <li><a href="#">Submenu3</a></li>
+                    <li><a href="#">Submenu4</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+</body>
+
+</html>
