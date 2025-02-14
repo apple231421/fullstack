@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        header{
+            width: 1200px;
+            height: 300px;
+            background-image: url(/02.14/images/slide1.jpg);
+            margin: 0 auto;
+        }
+        header .arrow{
+            width: 32px;
+            height: 32px;
+            margin-top: 230px;
+        }
+        .arrow.left{
+            float: left;
+            background-image: url(/02.14/images/ct.jpg);
+            background-repeat: no-repeat;
+            background-position: 0 0;
+        }
+
+        .arrow.left:hover{
+            background-position: 0 -32px;
+        }
+
+        .arrow.right{
+            float: right;
+            background-image: url(/02.14/images/ct.jpg);
+            background-repeat: no-repeat;
+            /* 이미지 위치조정 */
+            background-position: -43px 0;
+        }
+        
+        .arrow.right:hover{
+            background-position: -43px -32px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="arrow left"></div>
+        <div class="arrow right"></div>
+    </header>
+</body>
+</html>
