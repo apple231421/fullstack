@@ -4,122 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<style>
-*{margin: 0;padding: 0;}
-.container{
-    width:1200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-header{
-    background-color: cadetblue;
-    height:100px;
-}
-header h1.logo{
-    width: 200px;
-    height:100px;
-    float: left;
-}
-header nav{
-    width:600px;
-    height:50px;
-    background-color: yellow;
-    float:right;
-    margin-top: 40px;
-    margin-right: 10px;
-}
-
-
-nav ul{
-    list-style: none;
-}
-nav>ul>li{   
-   float: left;
-}
-nav ul li a{
-   display: block;
-   width:150px;
-   height:50px;
-   line-height: 50px;
-   text-align: center;
-   color:#333;
-   text-decoration: none;
-}
-nav ul li ul{
-    background-color: yellow;
-    /* 자리값이 없어 겹치며, 맨위로 올라옴 */
-    position: absolute;
-    display: none;
-}
-nav ul li:hover ul{
-    display: block;
-}
-
-nav ul li a:hover{
- 
-}
-
-
-.img_slider{
-    background-color: #ccc;
-    height:300px;
-}
-section{
-    background-color: burlywood;
-    height:300px;
-}
-section article{
-    width:400px;
-    height:300px;
-    float: left;
-}
-/* section 아래(자식) article이면서 notice인 */
-section article.notice{
-    background-color: plum;
-}
-section article.banner{
-    background-color: aqua;
-}
-section article.icons{
-    background-color: violet;
-}
-
-
-footer{
-    background-color: #333;
-    height:100px;
-    color:#fff;
-}
-footer .foot_logo{
-    width:200px;
-    background-color: indianred;
-    height: 100px;
-    float: left;
-}
-footer .foot_right{
-    width: 1000px;
-    background-color: lightblue;
-    height: 100px;
-    float: left;
-}
-.foot_right .foot_menu{
-    height:50px;
-    background-color: lightgreen;
-}
-.foot_right .foot_copy{
-    height:50px;
-    background-color: orange;
-}
-
-
-</style>
+<link rel="stylesheet" href="css/lay3.css">
 </head>
 <body>
     <div class="container">
         <header>
             <h1 class="logo">
-                <img src="images/logo.png" alt="로고">
+                <img src="../02.13/images/logo.png" alt="로고">
             </h1>
             <nav>
                 <ul>
@@ -159,7 +50,7 @@ footer .foot_right{
             </nav>
         </header>
         <div class="img_slider">
-           <img src="/02.13/images/slide1.jpg" alt="">
+           <img src="../02.17/img/sl.jpg" alt="사진1">
         </div>
         <section>
             <article class="notice">공지사항</article>

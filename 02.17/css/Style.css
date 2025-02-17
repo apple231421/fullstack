@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+#wrapper {
+    width: 900px;
+    margin: 0 auto;
+}
+
+header {
+    height: 200px;
+    background-color: #f46075;
+}
+
+h1{
+    float: left;
+    color: white;
+    margin-left: 50px;
+    margin-top: 70px;
+}
+
+.logo_p{
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+
+nav {
+    float: left;
+    width: 900px;
+    height: 60px;
+    background-color: #ccc;
+    
+}
+
+nav>ul>li{
+    float: left;
+}
+nav ul li{
+    text-align: center;
+    list-style: none;
+}
+nav ul li a{
+    display: block;
+    width: 220px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 50px;
+    color: #333;
+}
+nav ul li ul{
+    background-color: #ccc;
+    display: none;
+}
+nav ul li:hover ul{
+    display: block;
+    position: absolute;
+}
+.main {
+    height: 550px;
+}
+
+section {
+    width: 650px;
+    height: 550px;
+    background-color: skyblue;
+}
+
+section h2{
+    text-align: center;
+    padding: 10px;
+}
+
+article{
+    width: 200px;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid #333;
+    float: left;
+    margin : 0 0 15px 40px;
+    background-color: white;
+    
+}
+article h3{
+    padding-left: 10px;
+    padding-bottom: 10px;
+    background-image: url("/02.14/애완견레이아웃/img/bg.png");
+    background-repeat: no-repeat;
+}
+
+p{
+    font-size: 12px;
+    /* 상자안 글자 양쪽 정렬 */
+    text-align: justify;
+}
+aside {
+    width: 200px;
+    height: 500px;
+    background-color: #ffffcc;
+    float: left;
+    text-align: center;
+}
+
+aside h2{
+
+    padding: 10px 0;
+}
+
+aside img{
+
+    padding-bottom: 10px;
+}
+
+footer {
+    line-height: 50px;
+    height: 50px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
