@@ -1,124 +1,144 @@
-* {
-    margin: 0;
-    padding: 0
-}
-
-#wrapper {
+*{margin:0;padding:0}
+#wrapper{
     width: 900px;
     margin: 0 auto;
 }
-
-header {
+header{
     height: 200px;
     background-color: #f46075;
 }
-
-h1{
-    float: left;
-    color: white;
+header h1{
+    float:left;
     margin-left: 50px;
     margin-top: 70px;
+    color:#fff;
 }
-
-.logo_p{
-    float: right;
+header .logo_p{
     margin-right: 20px;
     margin-top: 20px;
+    float:right;
 }
+
 nav {
     height: 60px;
     background-color: #ccc;
-    
 }
 
-nav ul{
+nav ul {
     list-style: none;
-    float: left;
+    padding: 0;
+    margin: 0;
 }
 
-nav ul li{
+nav ul li {
     float: left;
-    margin-left: 50px;
+    margin-left: 40px;
     margin-top: 10px;
+    position: relative;
 }
 
-nav ul li a{
+nav ul li a {
     display: block;
     width: 160px;
     height: 40px;
     line-height: 40px;
     text-align: center;
     text-decoration: none;
-    color: white;
-    /* background-color: #333; */
+    color: black;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
     background-color: #f46075;
     font-weight: bold;
     color: #fff;
     border-radius: 20px;
 }
-.main {
-    height: 550px;
+
+nav ul li ul {
+    background-color: #ccc;
+    list-style: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 160px;
+    display: none;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    float: none;
+    text-align: center;
+}
+
+nav ul li ul li a {
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li ul li a:hover {
+    background-color: #ff7b9c;
 }
 
 
-
-section {
+.main{
+    height:550px;
+}
+section{
     width: 650px;
-    height: 550px;
-    background-color: skyblue;
+    height:550px;
+    background-color: skyblue; 
     float: left;
 }
-
 section h2{
     text-align: center;
     padding: 10px;
 }
-
-article{
-    width: 250px;
-    height: 200px;
+section article{
+    width:270px;
+    height:210px;
     padding: 10px;
+    float:left;
+    background-color: #fff;
     border: 1px solid #333;
-    float: left;
-    margin : 0 0 15px 40px;
-    background-color: white;
-    
+    margin: 0 0 15px 20px;
 }
 article h3{
-    padding-left: 10px;
     padding-bottom: 10px;
-    background-image: url("/02.14/애완견레이아웃/img/bg.png");
+    padding-left: 30px;
+    background-image: url(../img/bg.png);
     background-repeat: no-repeat;
-}
 
-p{
-    font-size: 12px;
-    /* 상자안 글자 양쪽 정렬 */
+
+}
+article p{
+    font-size: 14px;
     text-align: justify;
 }
-aside {
-    width: 250px;
-    height: 550px;
+aside{
+    text-align: center;
+    width:250px;
+    height:550px;
     background-color: #ffffcc;
     float: left;
-    text-align: center;
 }
-
 aside h2{
     padding: 10px 0;
 }
-
 aside img{
+    
     padding-bottom: 10px;
 }
-
-footer {
+footer{
+    height:50px;
     line-height: 50px;
-    height: 50px;
     background-color: #333;
-    color: #fff;
+    color:#fff;
     text-align: center;
 }

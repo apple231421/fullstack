@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.contents {
+    width: 100%;
+    height: 530px;
+    background-image: url(../롤링파스타/img/intro_bg.png);
+}
+
+.left img{
+    margin-left: 180px;
+    margin-top: 50px;
+}
+.section1 {
+    width: 1440px;
+    height: 530px;
+    margin: 0 auto;
+    padding: 50px 0;
+    text-align: center;
+}
+
+
+.section1 .left {
+    width: 340px;
+    float: left;
+}
+
+.section1 .left img {
+    padding-top: 100px;
+}
+
+.section1 .right {
+    width: 1100px;
+    float: right;
+}
+
+.r_top{
+    margin-top: 50px;
+    margin-right: 100px;
+}
+.maintxt{
+    margin-top: 20px;
+
+}
+
+.maintxt h3{
+    color: rgb(41, 61, 92);
+}
+.r_bottom ul {
+    list-style: none;
+    width: 770px;
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+.r_bottom ul li {
+    float: left;
+    width: 190px;
+    height: 250px;
+}
+
+.r_bottom ul li a {
+    display: block;
+    margin: 20px auto;
+    width: 150px;
+    height: 150px;
+}
+
+.r_bottom ul li p{
+    font-weight: bold;
+}
+
+
+
+/* 이미지를 빽그라운드 이미지를 지움 */
+.r_bottom ul li a img:nth-child(1){
+    display: block;
+}
+.r_bottom ul li a img:nth-child(2){
+    display: none;
+}
+
+/* 위에 지운 이미지를 마우스를 올렸을떄 나오게 해줌 */
+.r_bottom ul li a:hover img:nth-child(1){
+    display: none;
+}
+.r_bottom ul li a:hover img:nth-child(2){
+    display: block;
+}
+
+
+
+/* 메인 화면 */
+.section2 {
+    width: 1440px;
+    height: 700px;
+    border: 1px solid#333;
+    /* 중앙 정렬 */
+    margin: 0 auto;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.title {
+    padding-bottom: 50px;
+}
+
+.title h2 {
+    font-size: 43px;
+    font-weight: bold;
+}
+
+ul.list {
+    list-style: none;
+    width: 100%;
+    height: 430px;
+}
+
+.outline {
+    margin-top: 50px;
+}
+
+.list li {
+    width: 340px;
+    height: 430px;
+    /* padding border 포함크기가 같다. */
+    box-sizing: border-box;
+    border: 1px solid#333;
+    float: left;
+    padding: 50px;
+    margin-right: 26.6px;
+}
+
+.list li:nth-child(4) {
+    margin-right: 0;
+}
+
+.section2.bottom1 {
+    padding: 40px 0;
+}
+
+.bottom1 .txt5 {
+    margin-top: 30px;
+}
+
+.bottom1 .txt5 a {
+    display: block;
+    padding: 19px 10px;
+    background-color: #003b5a;
+    color: #fff;
+    text-decoration: none;
+    width: 320px;
+    margin: 0 auto;
+}
