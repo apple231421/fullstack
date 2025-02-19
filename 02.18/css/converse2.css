@@ -29,7 +29,7 @@
     width:0px;
     height:450px;
     background-color:rgba(0,0,255,0.3) ;
-    transition: all 0.2s;
+    transition: all 0.5s;
 }
 .section1 ul li:hover a span{
     width:360px;

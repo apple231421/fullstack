@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+
+        .box1 {
+            background-color: rgb(255, 207, 145);
+        }
+
+        .bigbox{
+            /* 전체(부모)에  position: relative 사용시에
+            전체(부모) 안()에 있는 클래스(자식)에 position: absolute를 사용하면
+            전체(부모) 안에서만 클래스(자식)들이 움직일수있다
+            */
+            position: relative;
+            width: 700px;
+            height: 500px;
+            border: 1px solid #333;
+            margin: 0 auto;
+        }
+        .box2 {
+            position: absolute;
+            right: 50px;
+            bottom: 50px;
+            background-color: rgb(145, 255, 123);
+        }
+
+        .box3 {
+            position: absolute;
+            bottom:50px;
+            left: 50px;
+            background-color: rgb(113, 255, 255);
+        }
+
+        .box4 {
+            background-color: rgb(243, 115, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box1">박스1</div>
+    <div class="bigbox">
+        <div class="box box2">박스2</div>
+        <div class="box box3">박스3</div>
+    </div>
+    <div class="box box4">박스4</div>
+</body>
+
+</html>

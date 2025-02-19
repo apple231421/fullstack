@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    width: 500px;
+    height: 70px;
+    margin-bottom: 20px;
+    background-color: brown;
+    border: 2px solid rgb(204, 204, 204);
+}
+
+p {
+    font-size: 30px;
+    padding-bottom: 30px;
+    cursor: pointer;
+    /* 가짜 손가락 */
+}
+
+.tra {
+    background-color: #ae4329;
+    /* 현재 위치에서 x로 -500px 만큼(왼쪽)이동 */
+    transform: translate(-500px, 0);
+    /*                    (x축,y축) */
+    transition: all 10s;
+}
+
+.btn1:hover+.tra {
+    /* '+' 선택자는 next를 의미*/
+    transform: translate(0, 0);
+}
+
+.rot1 {
+    margin: 200px 0;
+    transform: rotate(0deg);
+    transition: all 3s;
+}
+
+.btn2:hover+.rot1 {
+    transform: rotate(360deg);
+}
+
+.rot2{
+    margin: 200px 0;
+    transform: rotate(0deg);
+    transition: all 3s;
+}
+.btn3:hover+.rot2{
+    transform: rotateY(360deg);
+}
+
+.rot3{
+    margin: 200px 0;
+    transform: rotate(0deg);
+    transition: all 1s;
+}
+.btn4:hover+.rot3{
+    transform: rotateX(360555deg);
+}
+
+.sca{
+    margin: 50px 0;
+    transform: scale(1,1);
+    transition: all 0.5s;
+}
+.btn5:hover +.sca{
+    transform: scale(1,2);
+}
+.ske{
+    margin: 50px 0;
+    transform: skew(0deg);
+    transition: all 0.5s;
+}
+.btn6:hover + .ske{
+    transform: skewX(-45deg);
+}
+.ske1{
+    margin: 50px 0;
+    transform: skew(0deg);
+    transition: all 0.5s;
+}
+.btn7:hover + .ske1{
+    transform: skewY(-45deg);
+}

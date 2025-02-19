@@ -1,0 +1,142 @@
+/* .box: 500x500px 크기의 사각형 */
+.box {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border: 1px solid #333;
+    /* 중앙정렬 (left 50%, top 50%로 위치 설정 후 translate로 정확한 중앙 정렬) */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bx {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%; 
+    background-color: yellow;
+    opacity: 50%; /* 반투명 처리 */
+}
+
+/* .box2: 왼쪽에서 400px 떨어진 위치 */
+.box2 {
+    left: 400px;
+}
+
+/* .box3: 왼쪽과 위쪽에서 400px 떨어진 위치 */
+.box3 {
+    top: 400px;
+    left: 400px;
+}
+
+/* .box4: 위쪽에서 400px 떨어진 위치 */
+.box4 {
+    top: 400px;
+}
+
+/* .line: 선을 만들기 위한 기본 설정 */
+.line {
+    position: absolute;
+    background-color: black; /* 검은색 선 */
+}
+
+/* .line1: 50px, 50px 위치에서 가로로 길어지는 애니메이션 */
+.line1 {
+    width: 0;
+    height: 3px; /* 높이는 3px */
+    top: 50px;
+    left: 50px;
+    animation: line1 3s forwards; /* 애니메이션 적용 */
+}
+
+/* line1 애니메이션: 가로 선 길이 변화 */
+@keyframes line1 {
+    0% {
+        width: 0; /* 시작 시 너비 0 */
+    }
+    100% {
+        width: 400px; /* 3초 후 너비 400px로 확장 */
+    }
+}
+
+/* .line2: 세로로 길어지는 선 (50px, 450px 위치에서 시작) */
+.line2 {
+    top: 50px;
+    left: 450px;
+    width: 3px; /* 세로 선이므로 너비는 3px */
+    height: 0;
+    animation: line2 3s 3s forwards; /* 3초 지연 후 애니메이션 시작 */
+}
+
+/* line2 애니메이션: 세로 선 길이 변화 */
+@keyframes line2 {
+    0% {
+        height: 0; /* 시작 시 높이 0 */
+    }
+    100% {
+        height: 400px; /* 3초 후 높이 400px로 확장 */
+    }
+}
+
+/* .line3: 450px, 50px 위치에서 가로로 길어지는 애니메이션 */
+.line3 {
+    top: 450px;
+    left: 50px;
+    width: 0;
+    height: 3px;
+    animation: line3 3s 6s forwards; /* 6초 지연 후 애니메이션 시작 */
+}
+
+/* line3 애니메이션: 가로 선 길이 변화 */
+@keyframes line3 {
+    0% {
+        width: 0;
+        left: 450px; /* 선이 오른쪽에서 시작 */
+    }
+    100% {
+        width: 400px; /* 3초 후 너비 400px로 확장 */
+        left: 50px; /* 선이 왼쪽으로 이동 */
+    }
+}
+
+/* .line4: 세로 선 (50px, 50px 위치에서 위쪽으로 길어짐) */
+.line4 {
+    top: 50px;
+    left: 50px;
+    width: 3px;
+    height: 0;
+    animation: line4 3s 9s forwards; /* 9초 지연 후 애니메이션 시작 */
+}
+
+/* line4 애니메이션: 세로 선 길이 변화 */
+@keyframes line4 {
+    0% {
+        height: 0; 
+        top: 450px; /* 시작 시 높이가 450px로 설정 */
+    }
+    100% {
+        height: 400px; /* 3초 후 높이 400px로 확장 */
+        top: 50px; /* 위쪽으로 위치 이동 */
+    }
+}
+
+/* .img: 이미지 중앙에 위치, opacity 0에서 1로 애니메이션 */
+.img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: img1 3s 12s forwards; /* 12초 후 애니메이션 시작 */
+    opacity: 0; /* 시작 시 투명 */
+}
+
+/* img1 애니메이션: 이미지의 opacity 변화 */
+@keyframes img1 {
+    0% {
+        opacity: 0; /* 시작 시 투명 */
+    }
+    100% {
+        opacity: 1; /* 애니메이션 끝나면 불투명 */
+    }
+}
