@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>점수 계산</title>
+    <script>
+        // 국어 영어 수학 세과목을 입력받아 총점과 평균을 구하시오
+        //prompt는 원래 문자를 입력받는 함수이다.
+        //number을 사용해서 정수형으로 바꾼다.
+
+        var a1 = Number(prompt("국어 점수를 입력하세요"));
+        var a2 = Number(prompt("영어 점수를 입력하세요"));
+        var a3 = Number(prompt("수학 점수를 입력하세요"));
+
+
+        var result1 = a1 + a2 + a3;
+        var result2 = result1 / 3;
+
+        alert("총점: " + result1);
+        alert("평균: " + result2); 
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

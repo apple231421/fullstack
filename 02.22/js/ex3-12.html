@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수</title>
+    <script>
+        var logic1, logic2, logic3, logic4, logic5;
+        //&& 둘다 참일때만 참
+        logic1 = (3 > 2) && (5 > 3);
+        console.log(logic1);
+
+        //&& 둘중에 하나라도 거짓이면 거짓
+        logic2 = (3 < 2) && (5 > 3);
+        console.log(logic2);
+
+        logic3 = (3 > 2) || (5 > 3);
+        console.log(logic3);
+
+        logic4 = (3 > 2) || (5 < 3);
+        console.log(logic4);
+        // 둘중에 하나라도 참이면 참
+
+        logic5 = !(5 > 3);
+        console.log(logic5);
+        // 참에 부정을 하면 거짓
+        
+        logic6 = !(5 < 3);
+        console.log(logic6);
+        //거짓에 부정을 하면 참
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
