@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //html css java 시험보고
+        //prompt로 입력 세과목받고
+        //평균이 60이상이고 각과목 과락(40점미만)이 없으면 합격입니다.
+
+        var a = Number(prompt("html 점수를입력해주세여", ""))
+        var b = Number(prompt("css 점수를입력해주세여", ""))
+        var c = Number(prompt("java 점수를입력해주세여", ""))
+        var avg = Number(a + b + c) / 3;
+        var comment
+        // if (avg >= 60 && (a > 40 && b > 40 && c > 40)) {
+        //     comment = "평균" + avg + '점 합격'
+        // } else {
+        //     comment = '평균' + avg + '점 불합격'
+        // }
+        // document.write(comment)
+
+        if (avg >= 60) {
+            if (a < 40) {
+                comment = 'html' + '40점 미만 불합격';
+            } else if (b < 40) {
+                comment = 'css' + '40점 미만 불합격';
+            } else if (c < 40) {
+                comment = 'java' + '40점 미만 불합격';
+            } else {
+                comment = '평균' + avg + '점 합격';
+            }
+        } else {
+            comment = '평균' + avg + '점 불합격';
+        }
+        document.write(comment);
+    </script>
+</body>
+
+</html>

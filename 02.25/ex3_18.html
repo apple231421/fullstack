@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var x = 0;
+        var y = 0;
+        var z = 6;
+        var sum1 = 0;
+        var sum2 = 0;
+        while (x <= 5) {
+            sum1 += x; //누적
+            x++;
+        }
+        // 1회전 sum1 = 0 x =1
+        // 2회전 sum1 = 1 x =2
+        // 3회전 sum1 = 3 x =3
+        // 4회전 sum1 = 6 x =4
+        // 5회전 sum1 = 10 x =5
+        // 6회전 sum1 = 15 x =6 x가 5보다 커져서 여기서 종료
+        document.write("x: " + sum1 + "<br>");
+
+        do {
+            sum2 += y;
+            y++;
+        } while (y <= 5)
+
+        document.write("y: " + sum2 + "<br>")
+
+        do {
+            z++;
+        } while (z <= 5)
+
+        document.write("z" + z)
+        // 초기값이 6이여도 do while 무조건 한번은 실행
+        // z는 7까지 증가후 종료
+    </script>
+</body>
+
+</html>

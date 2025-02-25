@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1 prompt로 년도를 입력받는다
+        // 연도가 4의 배수이면서 100의 배수가 아닐때 또는 400의 배수일때 윤년입니다
+        // ex) 2012년은 4의 배수이면서 100의 배수가 아니라서 윤년입니다.
+
+        // 삼항풀이방법
+        // var result = ((a % 4 == 0 && a % 100 !== 0) || a%400==0) ? "윤년" : "윤년아님";
+
+        var a = prompt("년도를 입력해주세여","2000");
+        if ((a % 4 == 0 && a % 100 !== 0 )|| a % 400 == 0) {
+            document.write(a + "년은 윤년")
+        } else {
+            document.write(a + "년은 윤년아님")
+        }
+
+    </script>
+</body>
+
+</html>

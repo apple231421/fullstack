@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+
+        .box1 {
+            background-color: rgb(255, 85, 85);
+        }
+        .box1 p{
+            /* 마진병합현상
+            부모와 자식이 둘다 블럭요소
+            자식에게 margin -top 주면 부모에게 흡수됨 == 부모에 margin-top이들어감
+            해결 부모에 padding-top을 준다 */
+            margin-top: 20px;
+        }
+
+        .box2 {
+            background-color: rgb(255, 177, 74);
+            margin-bottom: 50px;
+            /* 마진중첩현상 */
+        }
+
+        .box3 {
+            background-color: rgb(255, 240, 101);
+            margin-top: 50px;
+        }
+
+        .box4 {
+            background-color: rgb(191, 255, 88);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box1">
+        <p>박스1</p>
+    </div>
+    <div class="box box2">
+        <p>박스2</p>
+    </div>
+    <div class="box box3">
+        <p>박스3</p>
+    </div>
+    <div class="box box4">
+        <p>박스4</p>
+    </div>
+
+</body>
+
+</html>

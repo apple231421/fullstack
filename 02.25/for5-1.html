@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid #333;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        //  구구단 만들기
+        var table = '<table boder="1">'
+        for (var i = 2; i <= 3; i++) {
+            table += '<tr>'
+            for (var j = 1; j <= 9; j++) {
+                table += '<td>' + i + "X" + j + "=" + (j * i) + '</td>';
+            }
+            table += '</tr>'
+        }
+        table += '</table>';
+        document.write(table)
+
+        // 백틱표현
+        for (var i = 2; i <= 3; i++) {
+            document.write(i + "단 <br>")
+            for (var j = 1; j <= 9; j++) {
+                // 템프릿 리터럴 백틱 문법
+                document.write(`${i} X ${j} = ${i * j} <br> `)
+            }
+        }
+
+    </script>
+</body>
+
+</html>
