@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var today = new Date();
+        var year = today.getFullYear();
+        var month = today.getMonth() + 1;
+        var date = today.getDate();
+        var day = today.getDay();
+        var yoil;
+        switch (day) {
+            case 0:
+                yoil = "일요일";
+                break;
+            case 1:
+                yoil = "월요일";
+                break;
+            case 2:
+                yoil = "화요일";
+                break;
+            case 3:
+                yoil = "수요일";
+                break;
+            case 4:
+                yoil = "목요일";
+                break;
+            case 5:
+                yoil = "금요일";
+                break;
+            case 6:
+                yoil = "토요일";
+                break;
+            default:
+                yoil = "잘못입력"
+                break;
+        }
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        document.write(year + "년 " + month + "월 " + date + "일 " + yoil + " " + h + "시 " + m + "분 " + s + "초" + '<br>')
+        document.write(`${ year }년 ${ month }월 ${ date }일 ${ yoil } ${ h }시 ${ m }분 ${ s }초`);
+
+    </script>
+</body>
+
+</html>

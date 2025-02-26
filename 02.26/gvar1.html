@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //전역변수
+        var globalmessage= '나는 전역 변수야';
+        function showmessage(){
+            var localmessage='나는 지역변수야';
+            console.log(globalmessage);
+            console.log(localmessage);
+        }
+
+        showmessage();
+        console.log(globalmessage);
+        console.log(localmessage);
+        // globalmessage 함수 내부에서도 접근 가능(접근가능)
+        //localmessage 함수 내부에서만 사용가능(지역변수)
+        //함수 외부에서 localmessage를 출력하면 오류발생
+    </script>
+</body>
+</html>

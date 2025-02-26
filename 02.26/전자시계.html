@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        <span id="year">0000</span>년
+        <span id="month">00</span>월
+        <span id="date">00</span>일
+        <span id="nday">000</span>
+        <span id="hours">00</span>시
+        <span id="minutes">00</span>분
+        <span id="second">00</span>초
+    </h1>
+
+
+
+
+
+
+    <script>
+        // 현재 날짜와 시간을 업데이트하는 함수
+        function autotime() {
+            var today = new Date(); // 현재 날짜 및 시간 객체 생성
+            var year = today.getFullYear(); // 연도 가져오기
+            var month = today.getMonth() + 1; // 월 가져오기 (0부터 시작하므로 +1 필요)
+            var date = today.getDate(); // 일 가져오기
+            var day = today.getDay(); // 요일 가져오기 (0: 일요일, 6: 토요일)
+
+            var yoil; // 요일 문자열 저장 변수
+            switch (day) {
+                case 0:
+                    yoil = "일요일";
+                    break;
+                case 1:
+                    yoil = "월요일";
+                    break;
+                case 2:
+                    yoil = "화요일";
+                    break;
+                case 3:
+                    yoil = "수요일";
+                    break;
+                case 4:
+                    yoil = "목요일";
+                    break;
+                case 5:
+                    yoil = "금요일";
+                    break;
+                case 6:
+                    yoil = "토요일";
+                    break;
+                default:
+                    yoil = "잘못입력";
+                    break;
+            }
+
+            var h = today.getHours(); // 시 가져오기
+            var m = today.getMinutes(); // 분 가져오기
+            var s = today.getSeconds(); // 초 가져오기
+
+            // HTML 요소에 현재 날짜 및 시간 업데이트
+            document.getElementById('year').innerHTML = year;
+            document.getElementById('month').innerHTML = month;
+            document.getElementById('date').innerHTML = date;
+            document.getElementById('nday').innerHTML = yoil;
+            document.getElementById('hours').innerHTML = h;
+            document.getElementById('minutes').innerHTML = m;
+            document.getElementById('second').innerHTML = s;
+        }
+
+        // 페이지가 로드되자마자 현재 시간을 한 번 표시
+        autotime();
+
+        // 1초마다 autotime()을 실행하여 시간을 갱신
+        setInterval(autotime, 1000);
+
+    </script>
+</body>
+
+</html>
