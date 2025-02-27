@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        #galleryWrap {
+            position: relative;
+            top: 1000px;
+            width: 530px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #galleryWrap img {
+            vertical-align: bottom;
+            width: ;
+        }
+    </style>
+    <script>
+        var num = 1;
+        function nextGallery() {
+            num++; // num = num + 1
+            if (num > 7) {
+                num = 1;
+            }
+            document.getElementById('gallery').src = "img" + num + ".jpg";
+            return false; //링크 방치
+        }
+
+        function preGallery() {
+            num--; // num = num - 1
+            if (num < 1) {
+                num = 7;
+            }
+            document.getElementById('gallery').src = "img" + num + ".jpg";
+            return false; //링크 방치
+        }
+
+        // 변수 num값이 공유가 됨
+    </script>
+</head>
+
+<body>
+    <div id="galleryWrap">
+        <h2>이미지 넘기기</h2>
+
+        <a href="#" onclick="return preGallery()">
+            <img src="left_btn.png" alt="이전그림">
+        </a>
+
+        <img src="img1.jpg" alt="갤러리그림" id="gallery">
+
+        <a href="#" onclick="return nextGallery()">
+            <img src="right_btn.png" alt="다음그림">
+        </a>
+    </div>
+</body>
+
+</html>

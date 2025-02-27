@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //함수레벨 스코프
+        var a = 10;
+        function test() {
+            var x = 10 ; // var로 선언된 변수는 함수레벨스코프
+            document.write(x); //함수 내에서는 x에 접근 가능
+            if (true) {
+                var y = 20; // var로 선언된 변수는 블록을 넘어서 함수 내에서 유효
+            }
+            document.write(y); //함수 내에서는 y에 접근가능
+        }
+        test();
+        console.log(a);
+        console.log(x); // error x is not define
+        console.log(y);
+    </script>
+</body>
+
+</html>

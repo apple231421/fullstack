@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //블록레벨 스코프
+        var a = 10;
+        function test() {
+            var x = 10 ; // var로 선언된 변수는 함수레벨스코프
+            document.write(x); //함수 내에서는 x에 접근 가능
+            if (true) {
+                let y = 20; // let으로 선언된 변수는 해당 블록내에서만 유효
+                document.write(y); //y는 if 블록 내에서만 유효
+            }
+            document.write(y); //y는 if문 블록 밖에 있기때문에 오류 발생
+        }
+        test();
+    </script>
+</body>
+
+</html>

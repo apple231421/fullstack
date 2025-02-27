@@ -1,0 +1,95 @@
+body {
+    width: 100%;
+    background-color: #a1ff98;
+}
+
+.wrap {
+    margin: 300px auto;
+    width: 600px;
+    height: 300px;
+    border: 1px solid#333;
+}
+
+.main {
+    margin-left: 30px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+span {
+    display: inline-block;
+    width: 70px;
+    height: 20px;
+    text-align: center;
+    background-color: #fff;
+
+}
+
+#tab1 span {
+    border: 2px solid#5b79ff;
+    color: #5b79ff;
+}
+
+.s1 {
+    border: 2px solid#006d12;
+    color: #006d12;
+}
+
+.s2 {
+    border: 2px solid#47bcff;
+    color: #47bcff;
+}
+
+.s3 {
+    border: 2px solid#ff6e34;
+    color: #ff6e34;
+}
+
+.s4 {
+    border: 2px solid#ff6e34;
+    color: #ff6e34;
+}
+
+.s5 {
+    border: 2px solid#ff6e34;
+    color: #ff6e34;
+}
+
+
+.tab-container {
+    position: relative;
+    display: flex;
+}
+.tab-container #aaa{
+    position: absolute;
+    right:0;
+}
+
+
+.tab {
+    cursor: pointer;
+    /* 태그 위에 위치하는 마우스 커서의 모양을 바꿀 수 있습니다.*/
+    padding: 10px;
+
+    margin-right: 5px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active-content {
+    display: block;
+}
+
+.tab.active-tab {
+    border-bottom: 2px solid green;
+    color: green;
+    font-weight: bold;
+
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}

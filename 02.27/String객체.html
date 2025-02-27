@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // substring
+        var str = 'http://icoxpublish.com';
+        console.log(str.substring(0, 4)); // 0번부터 4번 이전까지
+        console.log(str.substring(7)); // 7번부터 끝까지 출력
+
+        // substr
+        var str = 'http://icoxpublish.com';
+        console.log(str.substr(7, 4));  //7번부터 4글짜
+
+        //split - split 다음에 있는 문자를 기준으로 좌우 배열로 나눔
+        var str = "Javascript_jQuery"
+        var division = str.split('_'); //_를 기준으로 배열나눔 1_2_3_4 면 0번이 1 1번이 2 2번이 3 3번이 4임
+        console.log(division[0] + ', ' + division[1]);
+
+        //replace()
+        var str = "m_out.gif"
+        console.log(str.replace('out', 'over'));
+
+        // concat 이어 붙힘
+        var str1 = 'nav'
+        var str2 = '_bg'
+        console.log(str1.concat(str2)); //nav_bg
+
+
+        // trim 공백 제거
+        var str = "  removeblank  ";
+        console.log(str.trim());
+    </script>
+</body>
+
+</html>

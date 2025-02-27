@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //length
+        var a = ("Hello, JavaScript!");
+        document.write("문자열 길이: " + a.length + "<br><br>");
+
+        //indexOf
+        var b = "programming"
+        document.write(`문자 "g"는  ${b.indexOf("g")}번째 인덱스에 있습니다 <br><br>`)
+
+        //toUpperCase
+        var c = "javascript is fun"
+        document.write(`예시 입력 <br> ${c} <br><br>예시 출력 <br>${c.toUpperCase(c)}<br><br>`)
+
+        //includes
+        var d = "I love JavaScript!";
+        var txt = d.includes("love");
+
+        if (txt === true) {
+            document.write("love" + "단어가 포함되어 있습니다." + "<br><br>");
+        } else {
+            document.write("단어가 포함되지 않았습니다" + "<br><br>");
+        }
+
+        //split
+        var h = "banana"
+        var count = h.split('a').length - 1
+        document.write(`"a"는 ${count}번 등장합니다<br><br>`)
+
+
+        //replace
+        var e = "I love Python!"
+        document.write(e.replace("Python!", "JavaScript!" + "<br><br>"))
+
+        //split
+        var f = "apple banana orange"
+        var g = f.split(' ');
+        document.write(`"${g[0]}", "${g[1]}", "${g[2]}"<br><br>`)
+
+
+        for(var i=0;i<g.length;i++){
+            console.log(g[i]);
+        }
+
+        g.forEach(function(eat)){
+            console.log(eat);
+        }
+    </script>
+</body>
+
+</html>
