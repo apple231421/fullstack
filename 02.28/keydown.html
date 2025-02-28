@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #cat-container {
+            position: relative; /* 부모 요소를 기준으로 고양이 이동 */
+        }
+
+        #cat {
+            width: 100px; /* 고양이 이미지 크기 설정 */
+            position: absolute; /* 부모 요소 내부에서 이동 가능 */
+            transition: transform 0.3s ease-in-out; /* 부드러운 이동 효과 */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cat-container">
+        <img id="cat" src="img/1.png" alt="funny cat"> <!-- 고양이 이미지 -->
+    </div>
+</body>
+
+</html>
+
+<script>
+    let cat = document.getElementById('cat'); // 고양이 이미지 요소 가져오기
+
+    let currentX = 0; // 현재 X 좌표
+    let currentY = 0; // 현재 Y 좌표
+
+    // 키보드 이벤트 리스너 추가
+    document.addEventListener('keydown', function (e) {
+        movecat(e.key); // 키 입력 시 고양이 이동 함수 호출
+    });
+
+    function movecat(direction) {
+        const step = 100; // 한 번 이동할 거리
+        switch (direction) {
+            case 'ArrowUp':
+                currentY = currentY - step; // 위쪽으로 이동
+                break;
+            case 'ArrowDown':
+                currentY = currentY + step; // 아래쪽으로 이동
+                break;
+            case 'ArrowLeft':
+                currentX -= step; // 왼쪽으로 이동
+                break;
+            case 'ArrowRight':
+                currentX += step; // 오른쪽으로 이동
+                break;
+        }
+
+        // 누적된 위치를 적용하여 고양이 이동
+        cat.style.transform = `translate(${currentX}px, ${currentY}px)`;
+    }
+</script>

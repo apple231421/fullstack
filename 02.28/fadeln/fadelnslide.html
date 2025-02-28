@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/fade1.css"> <!-- 외부 CSS 파일 연결 -->
+</head>
+
+<body>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide fade">
+                <img src="img/slide1.jpg" alt="Slide 1">
+            </div>
+            <div class="slide fade">
+                <img src="img/slide2.jpg" alt="Slide 2">
+            </div>
+            <div class="slide fade">
+                <img src="img/slide3.jpg" alt="Slide 3">
+            </div>
+        </div>
+        <div class="pager">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 1; // 현재 활성화된 슬라이드 인덱스
+        showSlides(slideIndex); // 초기 슬라이드 표시
+
+        // 특정 슬라이드를 표시하는 함수
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        // 슬라이드를 업데이트하는 함수
+        function showSlides(n) {
+            let i;
+            const slides = document.getElementsByClassName('slide'); // 모든 슬라이드 요소 가져오기
+            const dots = document.getElementsByClassName('dot'); // 모든 도트 요소 가져오기
+
+            // 슬라이드 인덱스가 범위를 벗어나면 초기화
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+
+            // 모든 슬라이드 숨기기
+            for (i = 0; i < slides.length; i++) {
+                slides[i].classList.remove('on');
+            }
+
+            // 모든 도트의 활성화 상태 제거
+            for (i = 0; i < dots.length; i++) {
+                dots[i].classList.remove('active');
+            }
+
+            // 현재 활성화된 슬라이드 및 도트 설정
+            slides[slideIndex - 1].classList.add('on');
+            dots[slideIndex - 1].classList.add('active');
+        }
+
+        // 일정 시간마다 슬라이드 자동 변경
+        setInterval(function () {
+            plusSlides(1);
+        }, 3000);
+        
+        // 다음 슬라이드로 이동하는 함수
+        function plusSlides(i) {
+            showSlides(slideIndex += i);
+        }
+
+    </script>
+</body>
+
+</html>

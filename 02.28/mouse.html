@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrap">
+        <h1 id="m1">0000</h1> <!-- X 좌표를 표시하는 영역 -->
+        <h1 id="m2">0000</h1> <!-- Y 좌표를 표시하는 영역 -->
+    </div>
+</body>
+</html>
+<script>
+    document.onmousemove = function(e) {
+        var x = e.pageX; // 마우스의 X 좌표 가져오기
+        var y = e.pageY; // 마우스의 Y 좌표 가져오기
+        document.getElementById("m1").innerHTML = x; // X 좌표 업데이트
+        document.getElementById("m2").innerHTML = y; // Y 좌표 업데이트
+    }
+</script>

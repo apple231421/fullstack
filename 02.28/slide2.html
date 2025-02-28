@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 기본 스타일 초기화 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 헤더 스타일 */
+        header {
+            width: 100%;
+            max-width: 1920px;
+            height: 200px;
+            margin: 0 auto;
+            background-color: #ccc;
+        }
+
+        /* 슬라이드 컨테이너 스타일 */
+        .slide-container {
+            width: 100%;
+            max-width: 1920px;
+            height: 480px;
+            position: relative;
+        }
+
+        /* 슬라이더 스타일 */
+        .slider {
+            display: flex;
+            transition: transform 0.5s;
+            /* 슬라이드 이동 시 부드러운 애니메이션 효과 */
+        }
+
+        /* 버튼 스타일 */
+        button {
+            cursor: pointer;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 헤더 영역 -->
+    <header></header>
+
+    <!-- 슬라이드 쇼 컨테이너 -->
+    <div class="slide-container">
+        <div class="slider">
+            <!-- 개별 슬라이드 -->
+            <div class="slide">
+                <img src="images/slide1.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="images/slide2.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="images/slide3.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 슬라이더 및 슬라이드 요소 선택
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+
+        let index = 0; // 현재 슬라이드 인덱스
+        // 슬라이드를 표시하는 함수
+        function auto() {
+            index++;
+            if (index >= slides.length) index = 0
+
+
+            // 슬라이더를 이동하여 현재 슬라이드 표시
+            const transformValue = -index * 100 + '%';
+            slider.style.transform = "translateX(" + transformValue + ")";
+            console.log(currentIndex);
+        }
+
+        setInterval(auto, 2000);
+    </script>
+</body>
+
+</html>

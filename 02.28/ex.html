@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Color</title>
+    <link rel="stylesheet" href="css/ex.css"> <!-- 외부 CSS 파일 연결 -->
+</head>
+
+<body>
+    <ul>
+        <!-- 각 색상을 선택할 수 있는 링크들 -->
+        <li><a href="#" onclick="return changeBg('green')" id="result2">Green</a></li>
+        <!-- Green 클릭 시 changeBg 함수 호출 -->
+
+        <li><a href="#" onclick="return changeBg('orange')" id="result2">Orange</a></li>
+        <!-- Orange 클릭 시 changeBg 함수 호출 -->
+
+        <li><a href="#" onclick="return changeBg('purple')" id="result2">Purple</a></li>
+        <!-- Purple 클릭 시 changeBg 함수 호출 -->
+    </ul>
+    <div id="result"></div> <!-- 배경색이 변경될 div -->
+
+    <script>
+        // 색상을 변경하는 함수
+        function changeBg(color) {
+            const list = document.querySelectorAll('li'); // 모든 li 요소 가져오기
+
+            // 모든 li 요소에서 'on' 클래스 제거
+            list.forEach(a => a.classList.remove('on'));
+
+            // 클릭한 a 태그의 부모 li 요소에 'on' 클래스 추가
+            event.target.parentElement.classList.add("on");
+
+            var result = document.getElementById('result'); // 'result' id를 가진 div 가져오기
+            result.style.backgroundColor = color; // div의 배경색을 클릭한 색으로 변경
+
+            // 모든 a 태그에서 'active' 클래스 제거
+            const result2 = document.querySelectorAll('a');
+            result2.forEach(a => a.classList.remove('active'));
+            result2.forEach(a => a.style.color = ""); // 기존 색상 초기화
+
+            // 클릭한 a 태그에 'active' 클래스 추가
+            event.target.classList.add('active');
+            
+            // 글자색을 클릭한 색으로 변경
+            event.target.style.color = color;
+
+            return false; // a 태그의 기본 동작 (링크 이동)을 방지
+        }
+    </script>
+</body>
+
+</html>

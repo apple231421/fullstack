@@ -1,0 +1,50 @@
+a{
+    color: black;
+}
+a:link,
+a:active {
+    text-decoration: none;
+}
+#green:active{
+    color: green;
+}
+
+ul {
+    list-style: none;
+    width: 500px;
+    margin: 10px auto;
+    padding: 0;
+    text-align: center;
+    /* height: 50px; */
+    /* display: flex; */
+    /* 부모에게 flex 하면 자식이 나열됨*/
+}
+
+li {
+    /* float: left; 부모에 높이 반드시 줘야함 */
+    display: inline-block;
+    width: 120px;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 16px;
+    text-align: center;
+}
+
+li.on {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+#result {
+    width: 500px;
+    height: 300px;
+    margin: 30px auto;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+}
+
+p {
+    width: 80%;
+    padding: 10px;
+    line-height: 2em;
+}

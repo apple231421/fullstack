@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* m1 요소의 스타일 */
+        #m1 {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            /* 절대 위치 지정 */
+            top: 50px;
+            left: 30px;
+            z-index: 10;
+            /* 다른 요소들 위에 표시되도록 설정 */
+        }
+
+        /* m2 요소의 스타일 */
+        #m2 {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            /* 절대 위치 지정 */
+            top: 300px;
+            right: 30px;
+        }
+
+        /* m3 요소의 스타일 */
+        #m3 {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            /* 절대 위치 지정 */
+            bottom: 80px;
+            left: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- 각각의 이미지를 감싸고 있는 h1 요소들 -->
+        <h1 id="m1"><img src="img/1.png" alt=""></h1>
+        <h1 id="m2"><img src="img/2.png" alt=""></h1>
+        <h1 id="m3"><img src="img/3.png" alt=""></h1>
+    </div>
+</body>
+
+</html>
+
+<script>
+    // 마우스 이동에 반응하는 이벤트 리스너
+    document.addEventListener('mousemove', function (e) {
+        var x = e.pageX; // 마우스 X 좌표
+        var y = e.pageY; // 마우스 Y 좌표
+        var ele1 = document.getElementById('m1'); // id가 m1인 요소를 가져옴
+        // 마우스 위치에 따라 m1의 top, left 위치를 변경
+        ele1.style.top = (y - 70) + "px";  // 마우스 위치에서 70px을 빼서 요소의 위치 조정
+        ele1.style.left = (x - 50) + "px"; // 마우스 위치에서 50px을 빼서 요소의 위치 조정
+    });
+</script>
