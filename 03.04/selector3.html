@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="mylist">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+</body>
+</html>
+<script>
+    const a = document.querySelector('#mylist');
+    const children = a.children;
+    console.log(children[0].textContent);
+
+
+    const child = document.querySelectorAll('#mylist li')
+    console.log(child[0].textContent);
+    console.log(child[1].textContent);
+    console.log(child[2].textContent);
+</script>
