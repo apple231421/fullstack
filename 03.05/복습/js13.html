@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var num =1;
+        var table = "<table border=1>";
+
+        // 줄 갯수
+        for (var i = 1; i <= 5; i++) {
+            table += "<tr>";
+            // 칸 갯수
+            for (var j = 1; j <= 5; j++) {
+                table += (`<td>${num}</td>`);
+                num++;
+            }
+
+            table += "</tr>";
+        }
+        table += "</table>";
+        document.write(table)
+
+    </script>
+</body>
+<table>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+</table>
+
+</html>

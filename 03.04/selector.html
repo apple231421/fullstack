@@ -5,6 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        //html ,css를 읽고 나서 실행해라
+        // window.onload = function () {내용}
+        document.addEventListener('DOMContentLoaded', function () {
+            const element = document.querySelector('#myDiv');
+            console.log(element.textContent); // "hello world"
+
+
+            const elements = document.querySelectorAll('.myclass');
+            console.log(elements[0].textContent); // "first"
+            console.log(elements[1].textContent); // "second"
+
+
+            const paragraphs = document.getElementsByTagName('p');
+            console.log(paragraphs.length); // 2
+            console.log(paragraphs[0].textContent); // "paragraph1"
+            console.log(paragraphs[1].textContent); // "paragraph2"
+        })
+    </script>
 </head>
 
 <body>
@@ -14,21 +33,7 @@
     <p class="paragraphs">paragraph1</p>
     <p class="paragraphs">paragraph2</p>
 
-    <script>
-        const element = document.querySelector('#myDiv');
-        console.log(element.textContent); // "hello world"
 
-
-        const elements = document.querySelectorAll('.myclass');
-        console.log(elements[0].textContent); // "first"
-        console.log(elements[1].textContent); // "second"
-
-
-        const paragraphs = document.getElementsByTagName('p');
-        console.log(paragraphs.length); // 2
-        console.log(paragraphs[0].textContent); // "paragraph1"
-        console.log(paragraphs[1].textContent); // "paragraph2"
-    </script>
 </body>
 
 </html>

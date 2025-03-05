@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+        ul li{
+            list-style: none;
+        }
+        ul li.on{
+            background-color: red;
+            color: #fff;
+        }
+    </style>
+    <script>
+        $(function(){
+            $("ul li").click(function(){
+                $("ul li").removeClass('on')
+                $(this).addClass('on')
+            })
+            
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li>난1번</li>
+        <li>난2번</li>
+        <li>난3번</li>
+        <li>난4번</li>
+    </ul>
+</body>
+</html>
