@@ -53,6 +53,7 @@
 
         .tab2 li {
             display: none;
+            text-align: center;
         }
 
         .tab2 li.main {
@@ -64,12 +65,12 @@
     <script>
         $(function(){
             $('.tab1 li').click(function(){
-               var i =  $(this).index()
-               $('.tab1 li').removeClass("menu")
-               $('.tab1 li').eq(i).addClass("menu")
-               $(".tab2 li").removeClass("main")
-               $(".tab2 li").eq(i).addClass("main")
-            });
+                var i = $(this).index();
+                $('.tab1 li').removeClass("menu")
+                $('.tab1 li').eq(i).addClass("menu")
+                $('.tab2 li').removeClass("main")
+                $('.tab2 li').eq(i).addClass("main")
+            })
         })
 
 

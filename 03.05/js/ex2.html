@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+
+        .tab1 {
+            margin-top: 250px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .tab1 li {
+            border: 1px solid #333;
+        }
+        .tab1 .menu{
+            background-color: red;
+            color: white;
+        }
+        .tab2 {
+            margin: 0 auto;
+            width: 200px;
+            height: 100px;
+            border: 1px solid#333;
+            background-color: #ffc7c7;
+        }
+        .tab2 li{
+            display: none;
+            font-size: 20px;
+            text-align: center;
+        }
+        .tab2 .main{
+            display: block;
+        }
+    </style>
+    <script>
+        $(function(){
+            $('.tab1 li').click(function(){
+                var i = $(this).index();
+                $('.tab1 li').removeClass('menu')
+                $('.tab1 li').eq(i).addClass('menu')
+                $('.tab2 li').removeClass('main')
+                $('.tab2 li').eq(i).addClass('main')
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <ul class="tab1">
+        <li class="menu">한식</li>
+        <li>중식</li>
+        <li>일식</li>
+        <li>분식</li>
+    </ul>
+    <ul class="tab2">
+        <li class="main">비빔밥,갈비,잡채,떡갈비</li>
+        <li>짜장면,짬뽕,탕수육</li>
+        <li>초밥,라멘,소바</li>
+        <li>오댕,토스트,떡볶이</li>
+    </ul>
+</body>
+
+</html>

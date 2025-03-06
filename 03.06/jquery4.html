@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <title>Document</title>
+    <style>
+        h1 {
+            width: 200px;
+            text-align: center;
+            border: 1px solid #333;
+            cursor: pointer;
+        }
+
+        h1.on {
+            background-color: blueviolet;
+            color: #fff;
+        }
+    </style>
+    <script>
+        $(function () {
+            $('h1').click(function () {
+                // hasClass는 'on'을 가지고있으면 true반환 없으면 false
+                if ($(this).hasClass('on')) {
+                    $(this).removeClass('on')
+                }else{
+                    $(this).addClass('on');
+                }
+                // $(this).toggleClass('on') 위에 코드랑 같은 역활
+            })
+
+        })
+    </script>
+</head>
+
+<body>
+    <h1>난버튼</h1>
+</body>
+
+</html>
