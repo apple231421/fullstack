@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
     <title>Document</title>
     <style>
         * {
@@ -31,7 +32,7 @@
 
         #banner {
             width: 800px;
-            border: 1px solid red;
+
             height: 54px;
         }
 
@@ -56,10 +57,6 @@
                 <li><a href=""><img src="img/pic_t3.jpg" alt="사진3"></a></li>
                 <li><a href=""><img src="img/pic_t4.jpg" alt="사진4"></a></li>
                 <li><a href=""><img src="img/pic_t5.jpg" alt="사진5"></a></li>
-
-                <li><a href=""><img src="img/pic_t1.jpg" alt="사진1"></a></li>
-                <li><a href=""><img src="img/pic_t2.jpg" alt="사진2"></a></li>
-                <li><a href=""><img src="img/pic_t3.jpg" alt="사진3"></a></li>
             </ul>
         </div>
         <p>
@@ -76,47 +73,50 @@
 </html>
 
 <script>
-    var list = document.getElementById('banner'); //넓이 800을 주었던 banner
-    var listLi = document.querySelectorAll('#banner li'); // 각각의 사진을 감싸는 li
-    var total = listLi.length; // 총사진의 갯수 (5개)
-    var li_width = 80;
-    // var li_width = document.querySelectorAll('#banner>li').offsetwidth; li한개의 크기
+    // #banner_wrap 슬라이드 전체를 감싸는 선택자
+    // #frame 232 54 px 사진세장만 감싸는 선택자 파란색테두리
+    // 완성된후 overflow : hidden
+    // #banner 전체사진을 나열할 크기의 선택자 800px 빨간색테두리
+    $(function () {
+        var num = 0; //슬라이드 증감번호
+        var li_w = $('#banner li').eq(0).width();// li 넓이
+        var copy1 = $('#banner li:lt(3)').clone();
+        //li 중 인덱번호가 3미만(less then) 를 복제 (앞에 사진 세장을 복사함)
+        $('#banner').append(copy1) // paste - ctrl + v 위치 맨뒤(append)에 사진3개 복사
 
-
-    // 왼쪽 버튼
-    document.querySelector('.prev').addEventListener('click', function (e) {
-        e.preventDefault();
-
-        if (num === 0) {
-            num = 5;
-            list.style.transition = 'none';
-            list.style.marginLeft = -li_width * num + "px"; //-400px
-        }
-        setTimeout(function () {
-            num--;
-            list.style.transition = 'margin-left 0.5s';
-            list.style.marginLeft = -li_width * num + "px";
-        }, 50)
-    })
-
-
-    // 오른쪽 버튼
-    var num = 0;
-    document.querySelector('.next').addEventListener('click', function (e) {
-        e.preventDefault();
-
-        if (num === 5) {
-            num = 0;
-            list.style.transition = 'none';
-            list.style.marginLeft = 0;
-        }
-        setTimeout(function () {
+        $('.next').click(function () {
+            if (num == 5) {
+                num = 0;
+                $('#banner').css('margin-left', '0');
+            }
             num++;
-            list.style.transition = 'margin-left 0.5s';
-            list.style.marginLeft = -li_width * num + "px";
-        }, 50)
+            $('#banner').stop().animate({ 'margin-left': -li_w * num }, 500)
+            return false;
+        })
+
+        $('.prev').click(function () {
+            if (num == 0) {
+                num = 5;
+                $('#banner').css('margin-left', -li_w * num);
+            }
+            num--;
+            $('#banner').stop().animate({ 'margin-left': -li_w * num }, 500)
+            return false;
+        })
+
+        // 자동 슬라이드
+
+        var id = setInterval(autoplay,2000)
+
+        function autoplay() {
+            if (num == 5) {
+                num = 0;
+                $('#banner').css('margin-left', '0');
+            }
+            num++;
+            $('#banner').stop().animate({ 'margin-left': -li_w * num }, 500)
+        }
     })
 
 
-    
 </script>
