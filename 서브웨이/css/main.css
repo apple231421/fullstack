@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.wrap {
+    width: 1920px;
+    position: relative;
+    min-width: 1280px;
+
+}
+
+.header_out {
+    width: 1920px;
+    min-width: 1280px;
+    height: 170px;
+
+}
+
+.header_line {
+    width: 1920px;
+    height: 165px;
+    border-top: 5px solid green;
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    transform: translate(-50%, 0);
+}
+
+
+.right_menu {
+    position: absolute;
+    right: 300px;
+    top: 50px;
+    line-height: 20px;
+}
+
+.right_menu li {
+    float: left;
+    margin-left: 15px;
+
+}
+
+.right_menu li a {
+    font-size: 13px;
+    color: #666666;
+    font-weight: bold;
+}
+
+/* 메뉴 */
+.gnb {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    /* 부모 너비에 맞추기 */
+    height: 50px;
+    top: 120px;
+    font-weight: bold;
+    background-color: #fff;
+    z-index: 99;
+    display: flex;
+    /* 플렉스 박스 적용 */
+    justify-content: center;
+    /* 메뉴를 수평 가운데로 정렬 */
+}
+
+.gnb>ul {
+    display: flex;
+    /* 메뉴 항목들을 플렉스 박스로 배열 */
+    margin: 0;
+    padding: 0;
+    width: auto;
+    /* 메뉴의 너비를 자동으로 맞추기 */
+    position: relative;
+    z-index: 10;
+}
+
+
+.gnb>ul>li {
+    float: left;
+}
+
+.gnb>ul>li>a {
+    width: 170px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    display: block;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.gnb ul li a:hover {
+    color: green;
+}
+
+.gnb ul li ul li {
+    margin-left: -15px;
+    width: 200px;
+    height: 30px;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.gnb ul li ul li a {
+    display: inline-block;
+    line-height: 20px;
+    padding: 14px 19px;
+    letter-spacing: -0.025em;
+}
+
+.gnb ul li ul li:hover a {
+    color: green;
+
+}
+
+.gnb ul li ul {
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.gnb ul:hover li ul {
+    height: 350px;
+}
+
+.shadow {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    border-top: 1px solid #ddd;
+    box-sizing: border-box;
+    transition: all 0.3s;
+    background-color: #fff;
+}
+
+.gnb ul:hover+.shadow {
+    height: 260px;
+    background: #fff;
+}
+
+.event_wrp {
+    width: 1920px;
+    min-width: 1280px;
+    /* 원하는 가로 크기 */
+    height: 480px;
+    margin: 0 auto;
+    /* 가운데 정렬 */
+    overflow: hidden;
+    /* 내부 요소가 넘치지 않도록 설정 */
+}
+
+.qkbtn {
+    width: 600px;
+    height: 80px;
+    position: relative;
+    /* 위치 고정 */
+    right: -950px;
+    bottom: 40px;
+}
+
+.local {
+    float: left;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    border-radius: 30px 0 0 0;
+    background: #ffce32 url(../img/qkbtn\ \(1\).png) no-repeat 90px 15px;
+}
+
+.local a {
+    text-align: center;
+    display: block;
+    font-size: 22px;
+    padding-left: 40px;
+}
+
+.inquiry {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    border-radius: 0 0 30px 0;
+    background: #009223 url(../img/qkbtn\ \(2\).png) no-repeat 50px 17px;
+}
+
+.inquiry a {
+    text-align: center;
+    display: block;
+    font-size: 22px;
+    padding-left: 40px;
+    color: white;
+}
+
+.subway_menu {
+    min-width: 1900px;
+    padding: 60px 0 0;
+    height: 560px;
+}
+.subway_menu .hd {
+    width: 1180px;
+    margin: 0 auto;
+    padding-bottom: 33px;
+    position: relative;
+}
+.subway_menu .hd h2{
+    font-size: 40px;
+    height: 77px;
+    line-height: 77px;
+    font-weight: bold;
+    background: url(../img/bg.png)no-repeat 0 -10px;
+}
+.subway_menu .tab{
+    position: absolute;
+    right: 0;
+    top: 33px;
+   
+}
+.subway_menu .tab ul li{
+    float: left;
+    margin-left: 20px;
+    /* background: url(../img/bar.png)  */
+    
+}
+.subway_main {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 1180px;
+    height: 320px;
+    text-align: center;
+}
+
+.subway_menu_slider ul li{
+    float: left;
+    width: 270px;
+    
+}
+.subway_menu_slider ul li h2{
+    font-size: 20px;
+}
+.subway_menu_slider ul li P{
+    font-size: 12px;
+}
