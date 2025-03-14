@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 ul {
     list-style: none;
 }
@@ -57,6 +61,11 @@ a {
     font-size: 13px;
     color: #666666;
     font-weight: bold;
+}
+
+.right_menu li img {
+    position: relative;
+    top: -5px;
 }
 
 /* 메뉴 */
@@ -116,7 +125,6 @@ a {
 }
 
 .gnb ul li ul li a {
-    display: inline-block;
     line-height: 20px;
     padding: 14px 19px;
     letter-spacing: -0.025em;
@@ -157,10 +165,10 @@ a {
 
 .event_wrp {
     width: 1920px;
-    min-width: 1280px;
+    max-width: 1920px;
+    min-width: 1920px;
     /* 원하는 가로 크기 */
     height: 480px;
-    margin: 0 auto;
     /* 가운데 정렬 */
     overflow: hidden;
     /* 내부 요소가 넘치지 않도록 설정 */
@@ -212,52 +220,422 @@ a {
 }
 
 .subway_menu {
+    max-width: 1900px;
     min-width: 1900px;
     padding: 60px 0 0;
     height: 560px;
 }
+
 .subway_menu .hd {
     width: 1180px;
     margin: 0 auto;
     padding-bottom: 33px;
     position: relative;
 }
-.subway_menu .hd h2{
+
+.subway_menu .hd h2 {
     font-size: 40px;
     height: 77px;
     line-height: 77px;
     font-weight: bold;
-    background: url(../img/bg.png)no-repeat 0 -10px;
+    background: url(../img/bg.png)no-repeat 0 0;
 }
-.subway_menu .tab{
+
+.subway_menu .tab {
     position: absolute;
     right: 0;
     top: 33px;
-   
+
 }
-.subway_menu .tab ul li{
+
+.subway_menu .tab li a {
+    color: #666666;
+    font-weight: bold;
+}
+
+.subway_menu .tab ul li {
     float: left;
     margin-left: 20px;
     /* background: url(../img/bar.png)  */
-    
+
 }
+
+.subway_main ul li p {
+    font-size: 11px;
+    color: #666666;
+    font-weight: bold;
+}
+
+/* 수정 예정 */
 .subway_main {
     position: relative;
     left: 50%;
-    transform: translate(-50%,0);
+    transform: translate(-50%, 0);
     width: 1180px;
     height: 320px;
     text-align: center;
+    z-index: 9999px;
 }
 
-.subway_menu_slider ul li{
+.subway_main .sub_1 {
+    position: relative;
+}
+
+.subway_main .sun_2 {
+    bottom: 500px;
+    position: fixed;
+}
+
+
+.cf ul li {
     float: left;
     width: 270px;
-    
+
 }
-.subway_menu_slider ul li h2{
+
+.cf ul li h2 {
     font-size: 20px;
 }
-.subway_menu_slider ul li P{
+
+.cf ul li P {
     font-size: 12px;
+}
+
+.c_subway {
+    width: 1920px;
+    position: relative;
+    min-width: 1280px;
+    height: 800px;
+    background: url(../img/main\ bg.gif);
+
+}
+
+.top {
+    width: 1920px;
+    position: relative;
+    min-width: 1280px;
+    height: 400px;
+}
+
+.lefttop {
+    top: 70px;
+    left: 350px;
+    position: absolute;
+    width: 400px;
+    height: 325px;
+    background: url(../img/bg\ \(1\).png)no-repeat;
+}
+
+.lefttop p {
+    top: 40px;
+    left: 30px;
+    position: absolute;
+    font-size: 26px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.lefttop .pbtn {
+    text-align: center;
+    margin-top: 10px;
+    line-height: 38px;
+
+    width: 100px;
+    height: 38px;
+    border: 3px solid #ffffff;
+    border-radius: 30px;
+    bottom: 60px;
+    left: 40px;
+    position: absolute;
+    font-size: 17px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+
+
+
+.righttop {
+    top: 70px;
+    right: 150px;
+    position: absolute;
+    width: 1000px;
+    height: 325px;
+    background: url(../img/bg\ \(2\).png)no-repeat;
+}
+
+.righttop p {
+    top: 40px;
+    right: 275px;
+    position: absolute;
+    font-size: 26px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.righttop .pbtn {
+    text-align: center;
+    margin-top: 10px;
+    line-height: 38px;
+
+    width: 125px;
+    height: 38px;
+    border: 3px solid #ffffff;
+    border-radius: 30px;
+    bottom: 60px;
+    right: 450px;
+    position: absolute;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.bottom {
+    width: 1920px;
+    position: relative;
+    min-width: 1280px;
+    height: 400px;
+
+}
+
+.leftbottom {
+    bottom: 40px;
+    left: 350px;
+    position: absolute;
+    width: 800px;
+    height: 325px;
+    background-color: #ffffff;
+    border-radius: 25px 0 25px 0;
+}
+
+.lefthd h2 {
+    top: 80px;
+    left: 50px;
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 60px;
+    line-height: 80px;
+    text-align: center;
+    background: url(../img/bg.png)no-repeat;
+}
+
+.lefthd p {
+    top: 170px;
+    left: 50px;
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 60px;
+    text-align: center;
+}
+
+
+.mainlist a {
+    top: 70px;
+    right: -330px;
+    position: relative;
+    line-height: 40px;
+}
+
+.mainlist ul a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px; 
+    background-color: #009223; 
+    transform: scaleX(0); 
+    transform-origin: left; 
+    transition: transform 0.3s ease-in-out;
+}
+
+.mainlist ul a:hover {
+    color: #009223;
+}
+
+.mainlist a:hover::after {
+    transform: scaleX(1); /* 100% 크기로 확장 */
+}
+
+
+
+.rightbottom {
+    bottom: 40px;
+    right: 400px;
+    position: absolute;
+    width: 325px;
+    height: 325px;
+}
+
+.rb_pic li img {
+    width: 325px;
+    height: 325px;
+    border-radius: 0 25px 0 25px;
+}
+
+.q_menu {
+    position: relative;
+    width: 1920px;
+    min-width: 1800px;
+    height: 125px;
+}
+
+.q_menu ul li {
+    position: relative;
+    float: left;
+    width: 160px;
+    margin-left: 150px;
+    left: 15%;
+    top: 30px;
+}
+
+.q_menu .con {
+    position: absolute;
+    left: -70px;
+    width: 70px;
+    height: 70px;
+    text-indent: -9999px;
+}
+
+.q_menu .con1 {
+    background: url(../img/q_mu.png) no-repeat 0 0;
+}
+
+.q_menu .con2 {
+    background: url(../img/q_mu.png) no-repeat -70px 0;
+}
+
+.q_menu .con3 {
+    background: url(../img/q_mu.png) no-repeat -140px 0;
+}
+
+.q_menu .con4 {
+    background: url(../img/q_mu.png) no-repeat -210px 0;
+}
+
+.q_menu ul li p {
+    position: relative;
+    top: 10px;
+    left: 15px;
+}
+
+.q_menu strong {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.q_menu span {
+    font-size: 13px;
+}
+
+footer {
+    position: relative;
+    width: 1920px;
+    min-width: 1800px;
+    height: 150px;
+    background-color: #292929;
+}
+
+footer .fottop {
+    width: 1920px;
+    min-width: 1800px;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid#8f8f8f;
+}
+
+footer .fottop li {
+    position: relative;
+    left: 320px;
+    float: left;
+    margin-left: 30px;
+    font-size: 14px;
+
+}
+
+footer .fottop li a {
+    color: #666666;
+}
+
+.fottop ul .ft1 a {
+    color: #ddd;
+}
+
+.fotbot .fb_left {
+    float: left;
+    width: 1320px;
+    height: 100px;
+    font-size: 12px;
+}
+
+.fotbot .fb_left p {
+    position: relative;
+    top: 35px;
+    left: 350px;
+    color: #666666;
+}
+
+.fotbot .fb_right {
+    float: left;
+    width: 600px;
+    height: 100px;
+}
+
+.fb_right .fb_con {
+    position: relative;
+    top: 20px;
+    margin-left: 10px;
+}
+
+.fb_right .fb_con1 {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: url(../img/star.png) 0 0;
+}
+
+.fb_right .fb_con2 {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: url(../img/fb.png) no-repeat 0 0;
+}
+
+.fb_right a:nth-child(2):hover {
+    background: url(../img/fb.png) no-repeat -50px 0;
+}
+
+.fb_right a:nth-child(1):hover {
+    background: url(../img/star.png) no-repeat -50px 0;
+}
+
+#notice_wrap {
+    width: 480px;
+    height: 500px;
+    position: absolute;
+    left: 100px;
+    top: 210px;
+    box-shadow: 0 0 8px #000;
+    font-size: 12px;
+    z-index: 9999;
+}
+
+#notice_wrap img {
+    position: relative;
+    float: left;
+}
+
+.closewrap {
+    background-color: #000;
+    color: #fff;
+    text-align: #fff;
+    padding: 5px 10px;
+}
+
+.closewrap button {
+    position: absolute;
+    right: 2px;
+    cursor: pointer;
 }

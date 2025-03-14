@@ -1,0 +1,17 @@
+package a0314;
+
+import java.util.*;
+
+public class if1_1 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("나이를 입력하세요 : ");
+        int age = scanner.nextInt();
+
+        if (age >= 18)
+            System.out.println("당신은 성인입니다");
+        else
+            System.out.println("당신은 미성년자 입니다");
+    }
+}
