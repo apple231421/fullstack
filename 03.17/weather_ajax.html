@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.2/js/all.js"
+        integrity="sha384-vuFJ2JiSdUpXLKGK+tDteQZBqNlMwAjhZ3TvPaDfN9QmbPb7Q8qUpbSNapQev3YF"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <style>
+        .weather{
+            width: 300px;
+            height: 150px;
+            text-align: center;
+            background-color: cornflowerblue;
+            color: #fff;
+        }
+        .weather > div{
+            float: left;
+            height: 75px;
+            line-height: 75px;
+            width: 50%;
+        }
+        .weather > div.curricon, .weather > div.currtemp{
+            font-size: 50px;
+        }
+        .weather > div.city{
+            width: 100%;
+            font-size:23px;
+        }
+    </style>
+    <script>
+        $(function () {
+            let weathericon = {
+                '01': 'fas fa-sun',
+                '02': 'fas fa-cloud-sun',
+                '03': 'fas fa-cloud',
+                '04': 'fas fa-cloud-meatball',
+                '09': 'fas fa-cloud-sun-rain',
+                '10': 'fas fa-cloud-showers-heavy',
+                '11': 'fas fa-poo-storm',
+                '13': 'fas fa-snowflake',
+                '50': 'fas fa-smog'
+            };
+
+            var apiuri = "https://api.openweathermap.org/data/2.5/weather?id=1835848&appid=fc19f2eecc6d1c5b0e0e387077be9509&units=metric";
+
+            $.ajax({
+                url: apiuri,
+                dataType: "json",
+                type: "GET",
+                async: false,
+                success: function (data) {
+                    var $icon = data.weather[0].icon.substring(0, 2);
+                    var $temp = Math.floor(data.main.temp) + '˚C';
+                    var $city = data.name;
+
+                    $('.curricon').append('<i class="'+weathericon[$icon]+'"></i>');
+                    $('.currtemp').prepend($temp);
+                    $('.city').append($city);
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="weather">
+        <div class="curricon"></div>
+        <div class="currtemp"></div>
+        <div class="city">도시: </div>
+    </div>
+</body>
+
+</html>

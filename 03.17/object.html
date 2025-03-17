@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 자바스크립트 객체
+        const person = {
+            name: "Alice",
+            age: 25,
+            isStudent: false,
+            greet: function () {
+                document.write("Hello " + this.name + "<br>");
+            }
+        };
+
+        document.write(person.name + "<br>");
+        document.write(person["age"] + "<br>");
+        person.greet();
+
+        // JSON 문자열을 객체로 변환
+        const jsonString = '{"name": "Alice","age": 25,"isStudent": false}';
+        const obj = JSON.parse(jsonString); 
+        console.log(obj.name); // Alice
+
+        // 객체를 JSON 문자열로 변환
+        const person1 = { name: "Alice", age: 25, isStudent: false };
+        const jsonString1 = JSON.stringify(person1); 
+        console.log(jsonString1); // {"name":"Alice","age":25,"isStudent":false}
+    </script>
+</body>
+
+</html>
