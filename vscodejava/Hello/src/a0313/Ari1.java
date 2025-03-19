@@ -12,11 +12,11 @@ public class Ari1 {
         System.out.println(result1);
 
         int result3 = v1 / v2;
-        System.out.println("result" + result3);
+        System.out.println("result : " + result3);
 
         double result4 = v1 / (double)v2;
         //double 타입으로 강제 타입변환
-        System.out.println("result" + result4);
+        System.out.println("result : " + result4);
 
         double result5 = 10 /4;
         System.out.println(result5);
