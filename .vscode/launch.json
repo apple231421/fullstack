@@ -1,0 +1,938 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "Hellojava",
+            "request": "launch",
+            "mainClass": "a0312.Hellojava",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "hellojava2",
+            "request": "launch",
+            "mainClass": "a0312.hellojava2",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "var1",
+            "request": "launch",
+            "mainClass": "a0312.var1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "var2",
+            "request": "launch",
+            "mainClass": "a0312.var2",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "var3",
+            "request": "launch",
+            "mainClass": "a0312.var3",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "var4",
+            "request": "launch",
+            "mainClass": "a0312.var4",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "var5",
+            "request": "launch",
+            "mainClass": "a0312.var5",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "var6",
+            "request": "launch",
+            "mainClass": "a0312.var6",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "var7",
+            "request": "launch",
+            "mainClass": "a0312.var7",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "var8",
+            "request": "launch",
+            "mainClass": "a0312.var8",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "var8_1",
+            "request": "launch",
+            "mainClass": "a0312.var8_1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "varEx2",
+            "request": "launch",
+            "mainClass": "a0312.varEx2",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "varEx2_1",
+            "request": "launch",
+            "mainClass": "a0312.varEx2_1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "varEx3",
+            "request": "launch",
+            "mainClass": "a0312.varEx3",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "varEx4",
+            "request": "launch",
+            "mainClass": "a0312.varEx4",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "varEx5",
+            "request": "launch",
+            "mainClass": "a0312.varEx5",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "varEx6",
+            "request": "launch",
+            "mainClass": "a0312.varEx6",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "Ari1",
+            "request": "launch",
+            "mainClass": "a0313.Ari1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "Ari2",
+            "request": "launch",
+            "mainClass": "a0313.Ari2",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "Ari3",
+            "request": "launch",
+            "mainClass": "a0313.Ari3",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "Assiogn",
+            "request": "launch",
+            "mainClass": "a0313.Assiogn",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "Comp1",
+            "request": "launch",
+            "mainClass": "a0313.Comp1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "Comp2",
+            "request": "launch",
+            "mainClass": "a0313.Comp2",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "Ex01",
+            "request": "launch",
+            "mainClass": "a0313.Ex01",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "Logical1",
+            "request": "launch",
+            "mainClass": "a0313.Logical1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "Logical2",
+            "request": "launch",
+            "mainClass": "a0313.Logical2",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "Operadd1",
+            "request": "launch",
+            "mainClass": "a0313.Operadd1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "Operadd2",
+            "request": "launch",
+            "mainClass": "a0313.Operadd2",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "Operator1",
+            "request": "launch",
+            "mainClass": "a0313.Operator1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "Operator2",
+            "request": "launch",
+            "mainClass": "a0313.Operator2",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "Operator3",
+            "request": "launch",
+            "mainClass": "a0313.Operator3",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "Operator4",
+            "request": "launch",
+            "mainClass": "a0313.Operator4",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "Switch",
+            "request": "launch",
+            "mainClass": "a0314.Switch",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "Switch2",
+            "request": "launch",
+            "mainClass": "a0314.Switch2",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "Switch3",
+            "request": "launch",
+            "mainClass": "a0314.Switch3",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "Switch4",
+            "request": "launch",
+            "mainClass": "a0314.Switch4",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "Switch5",
+            "request": "launch",
+            "mainClass": "a0314.Switch5",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "escape",
+            "request": "launch",
+            "mainClass": "a0314.escape",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "escape1",
+            "request": "launch",
+            "mainClass": "a0314.escape1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "home",
+            "request": "launch",
+            "mainClass": "a0314.home",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "if1",
+            "request": "launch",
+            "mainClass": "a0314.if1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "if1_1",
+            "request": "launch",
+            "mainClass": "a0314.if1_1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "if1_2",
+            "request": "launch",
+            "mainClass": "a0314.if1_2",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "if2",
+            "request": "launch",
+            "mainClass": "a0314.if2",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "if3",
+            "request": "launch",
+            "mainClass": "a0314.if3",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "if4",
+            "request": "launch",
+            "mainClass": "a0314.if4",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "if5",
+            "request": "launch",
+            "mainClass": "a0314.if5",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "moverate",
+            "request": "launch",
+            "mainClass": "a0314.moverate",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "samhang",
+            "request": "launch",
+            "mainClass": "a0314.samhang",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "samhang1",
+            "request": "launch",
+            "mainClass": "a0314.samhang1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "scanner1",
+            "request": "launch",
+            "mainClass": "a0314.scanner1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "scanner2",
+            "request": "launch",
+            "mainClass": "a0314.scanner2",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "scanner3",
+            "request": "launch",
+            "mainClass": "a0314.scanner3",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "scanner4",
+            "request": "launch",
+            "mainClass": "a0314.scanner4",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "sfda",
+            "request": "launch",
+            "mainClass": "a0314.sfda",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "break1",
+            "request": "launch",
+            "mainClass": "a0317.break1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "break1_1",
+            "request": "launch",
+            "mainClass": "a0317.break1_1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "break2",
+            "request": "launch",
+            "mainClass": "a0317.break2",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "break3",
+            "request": "launch",
+            "mainClass": "a0317.break3",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "continue1",
+            "request": "launch",
+            "mainClass": "a0317.continue1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "do_while1_1",
+            "request": "launch",
+            "mainClass": "a0317.do_while1_1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "ex",
+            "request": "launch",
+            "mainClass": "a0317.ex",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "ex111",
+            "request": "launch",
+            "mainClass": "a0317.ex111",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "ex222",
+            "request": "launch",
+            "mainClass": "a0317.ex222",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "exfor",
+            "request": "launch",
+            "mainClass": "a0317.exfor",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "exfor2",
+            "request": "launch",
+            "mainClass": "a0317.exfor2",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "exfor3",
+            "request": "launch",
+            "mainClass": "a0317.exfor3",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "exrandom",
+            "request": "launch",
+            "mainClass": "a0317.exrandom",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "exscan",
+            "request": "launch",
+            "mainClass": "a0317.exscan",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "exscan2",
+            "request": "launch",
+            "mainClass": "a0317.exscan2",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "exwhile",
+            "request": "launch",
+            "mainClass": "a0317.exwhile",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "for1",
+            "request": "launch",
+            "mainClass": "a0317.for1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "for2",
+            "request": "launch",
+            "mainClass": "a0317.for2",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "nested1",
+            "request": "launch",
+            "mainClass": "a0317.nested1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "while1_1",
+            "request": "launch",
+            "mainClass": "a0317.while1_1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "while1_2",
+            "request": "launch",
+            "mainClass": "a0317.while1_2",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "while2_1",
+            "request": "launch",
+            "mainClass": "a0317.while2_1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "while2_2",
+            "request": "launch",
+            "mainClass": "a0317.while2_2",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "while2_3",
+            "request": "launch",
+            "mainClass": "a0317.while2_3",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "arr1",
+            "request": "launch",
+            "mainClass": "a0318.arr1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "arr3_1",
+            "request": "launch",
+            "mainClass": "a0318.arr3_1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "arrEx1",
+            "request": "launch",
+            "mainClass": "a0318.arrEx1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "arrEx2",
+            "request": "launch",
+            "mainClass": "a0318.arrEx2",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "arrEx3",
+            "request": "launch",
+            "mainClass": "a0318.arrEx3",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "array1",
+            "request": "launch",
+            "mainClass": "a0318.array1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "cylinder",
+            "request": "launch",
+            "mainClass": "a0318.cylinder",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "evenodd",
+            "request": "launch",
+            "mainClass": "a0318.evenodd",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "ex(1)",
+            "request": "launch",
+            "mainClass": "a0318.ex",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "ex1",
+            "request": "launch",
+            "mainClass": "a0318.ex1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "ex1_1",
+            "request": "launch",
+            "mainClass": "a0318.ex1_1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "ex2",
+            "request": "launch",
+            "mainClass": "a0318.ex2",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "ex3",
+            "request": "launch",
+            "mainClass": "a0318.ex3",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "factorial",
+            "request": "launch",
+            "mainClass": "a0318.factorial",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "max1",
+            "request": "launch",
+            "mainClass": "a0318.max1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "method1",
+            "request": "launch",
+            "mainClass": "a0318.method1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "method2",
+            "request": "launch",
+            "mainClass": "a0318.method2",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "method3",
+            "request": "launch",
+            "mainClass": "a0318.method3",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "method4",
+            "request": "launch",
+            "mainClass": "a0318.method4",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "method5",
+            "request": "launch",
+            "mainClass": "a0318.method5",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "overloading",
+            "request": "launch",
+            "mainClass": "a0318.overloading",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "ramyun",
+            "request": "launch",
+            "mainClass": "a0318.ramyun",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "randomnumber",
+            "request": "launch",
+            "mainClass": "a0318.randomnumber",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "square",
+            "request": "launch",
+            "mainClass": "a0318.square",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "square1",
+            "request": "launch",
+            "mainClass": "a0318.square1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "Ch5_10",
+            "request": "launch",
+            "mainClass": "a0319.Ch5_10",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "Ch5_11",
+            "request": "launch",
+            "mainClass": "a0319.Ch5_11",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "Score",
+            "request": "launch",
+            "mainClass": "a0319.Score",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "array2",
+            "request": "launch",
+            "mainClass": "a0319.array2",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "array3_1",
+            "request": "launch",
+            "mainClass": "a0319.array3_1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "arraytoparameter",
+            "request": "launch",
+            "mainClass": "a0319.arraytoparameter",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "gugudan1",
+            "request": "launch",
+            "mainClass": "a0319.gugudan1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "home(1)",
+            "request": "launch",
+            "mainClass": "a0319.home",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "lotto1",
+            "request": "launch",
+            "mainClass": "a0319.lotto1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "maxmin1",
+            "request": "launch",
+            "mainClass": "a0319.maxmin1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "shuffle",
+            "request": "launch",
+            "mainClass": "a0319.shuffle",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "simplemerge",
+            "request": "launch",
+            "mainClass": "a0319.simplemerge",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "sum1",
+            "request": "launch",
+            "mainClass": "a0319.sum1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "topscore",
+            "request": "launch",
+            "mainClass": "a0319.topscore",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "topscore_1",
+            "request": "launch",
+            "mainClass": "a0319.topscore_1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "visitors",
+            "request": "launch",
+            "mainClass": "a0319.visitors",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "class1",
+            "request": "launch",
+            "mainClass": "a0320.class1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "class3",
+            "request": "launch",
+            "mainClass": "a0320.class3",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "class4",
+            "request": "launch",
+            "mainClass": "a0320.class4",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "class5",
+            "request": "launch",
+            "mainClass": "a0320.class5",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "class5_1",
+            "request": "launch",
+            "mainClass": "a0320.class5_1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "ex_class",
+            "request": "launch",
+            "mainClass": "a0320.ex_class",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "home(2)",
+            "request": "launch",
+            "mainClass": "a0320.home",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "square(1)",
+            "request": "launch",
+            "mainClass": "a0320.square",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "sum1(1)",
+            "request": "launch",
+            "mainClass": "a0320.sum1",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "sum2",
+            "request": "launch",
+            "mainClass": "a0320.sum2",
+            "projectName": "kimchanggyu_5670c204"
+        },
+        {
+            "type": "java",
+            "name": "word1",
+            "request": "launch",
+            "mainClass": "a0320.word1",
+            "projectName": "kimchanggyu_5670c204"
+        }
+    ]
+}
