@@ -51,7 +51,7 @@ public class hotel {
     @Override
     public String toString() {
         return "숙소 이름 : " + name + ", 숙소 위치 : " + location + ", 숙소 가격 : " + price +
-                ", 숙박 가능 여부 : " + (available ? "숙박 가능" : "숙박 중");
+                ", 숙박 가능 여부 : " + (available ? "예약 가능" : "예약 중");
     }
 
     public void agoda() {
