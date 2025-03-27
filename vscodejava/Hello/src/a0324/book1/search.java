@@ -2,7 +2,6 @@ package a0324.book1;
 
 import java.util.Scanner;
 
-import a0317.break1;
 
 public class search {
     public static void main(String[] args) {

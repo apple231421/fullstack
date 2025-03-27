@@ -1,6 +1,6 @@
 package a0318;
 
-import a0317.for1;
+
 
 public class evenodd {
     public static void main(String[] args) {

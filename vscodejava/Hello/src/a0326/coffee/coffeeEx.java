@@ -8,10 +8,10 @@ public class coffeeEx {
     public static void main(String[] args) {
 
         Map<String, Integer> menu = new HashMap<>();
-        menu.put("americano", 3000);
-        menu.put("Latte", 4000);
-        menu.put("Mocha", 4500);
-        menu.put("Espresso", 2500);
+        menu.put("아메리카노", 3000);
+        menu.put("라떼", 4000);
+        menu.put("모카", 4500);
+        menu.put("에스프레소", 2500);
 
         Map<String, Integer> order = new HashMap<>();
         Scanner sc = new Scanner(System.in);

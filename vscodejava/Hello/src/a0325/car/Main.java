@@ -1,3 +1,5 @@
+package a0325.car;
+
 abstract class Vehicle {
     String name;
 

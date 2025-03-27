@@ -3,7 +3,6 @@ package a0324.book1;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import a0317.break1;
 
 public class librarymanager {
     private ArrayList<library> librarys; // library를 객체를 리스트(묶음으로 저장할 수 있는 배열종류)
