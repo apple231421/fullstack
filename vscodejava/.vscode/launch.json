@@ -1,0 +1,1470 @@
+{
+    // IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.
+    // 기존 특성에 대한 설명을 보려면 가리킵니다.
+    // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "Hellojava",
+            "request": "launch",
+            "mainClass": "a0312.Hellojava",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "hellojava2",
+            "request": "launch",
+            "mainClass": "a0312.hellojava2",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "var1",
+            "request": "launch",
+            "mainClass": "a0312.var1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "var2",
+            "request": "launch",
+            "mainClass": "a0312.var2",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "var3",
+            "request": "launch",
+            "mainClass": "a0312.var3",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "var4",
+            "request": "launch",
+            "mainClass": "a0312.var4",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "var5",
+            "request": "launch",
+            "mainClass": "a0312.var5",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "var6",
+            "request": "launch",
+            "mainClass": "a0312.var6",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "var7",
+            "request": "launch",
+            "mainClass": "a0312.var7",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "var8",
+            "request": "launch",
+            "mainClass": "a0312.var8",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "var8_1",
+            "request": "launch",
+            "mainClass": "a0312.var8_1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "varEx2",
+            "request": "launch",
+            "mainClass": "a0312.varEx2",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "varEx2_1",
+            "request": "launch",
+            "mainClass": "a0312.varEx2_1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "varEx3",
+            "request": "launch",
+            "mainClass": "a0312.varEx3",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "varEx4",
+            "request": "launch",
+            "mainClass": "a0312.varEx4",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "varEx5",
+            "request": "launch",
+            "mainClass": "a0312.varEx5",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "varEx6",
+            "request": "launch",
+            "mainClass": "a0312.varEx6",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "Ari1",
+            "request": "launch",
+            "mainClass": "a0313.Ari1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "Ari2",
+            "request": "launch",
+            "mainClass": "a0313.Ari2",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "Ari3",
+            "request": "launch",
+            "mainClass": "a0313.Ari3",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "Assiogn",
+            "request": "launch",
+            "mainClass": "a0313.Assiogn",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "Comp1",
+            "request": "launch",
+            "mainClass": "a0313.Comp1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "Comp2",
+            "request": "launch",
+            "mainClass": "a0313.Comp2",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "Ex01",
+            "request": "launch",
+            "mainClass": "a0313.Ex01",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "Logical1",
+            "request": "launch",
+            "mainClass": "a0313.Logical1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "Logical2",
+            "request": "launch",
+            "mainClass": "a0313.Logical2",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "Operadd1",
+            "request": "launch",
+            "mainClass": "a0313.Operadd1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "Operadd2",
+            "request": "launch",
+            "mainClass": "a0313.Operadd2",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "Operator1",
+            "request": "launch",
+            "mainClass": "a0313.Operator1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "Operator2",
+            "request": "launch",
+            "mainClass": "a0313.Operator2",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "Operator3",
+            "request": "launch",
+            "mainClass": "a0313.Operator3",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "Operator4",
+            "request": "launch",
+            "mainClass": "a0313.Operator4",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "Switch",
+            "request": "launch",
+            "mainClass": "a0314.Switch",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "Switch2",
+            "request": "launch",
+            "mainClass": "a0314.Switch2",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "Switch3",
+            "request": "launch",
+            "mainClass": "a0314.Switch3",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "Switch4",
+            "request": "launch",
+            "mainClass": "a0314.Switch4",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "Switch5",
+            "request": "launch",
+            "mainClass": "a0314.Switch5",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "escape",
+            "request": "launch",
+            "mainClass": "a0314.escape",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "escape1",
+            "request": "launch",
+            "mainClass": "a0314.escape1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "home",
+            "request": "launch",
+            "mainClass": "a0314.home",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "if1",
+            "request": "launch",
+            "mainClass": "a0314.if1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "if1_1",
+            "request": "launch",
+            "mainClass": "a0314.if1_1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "if1_2",
+            "request": "launch",
+            "mainClass": "a0314.if1_2",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "if2",
+            "request": "launch",
+            "mainClass": "a0314.if2",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "if3",
+            "request": "launch",
+            "mainClass": "a0314.if3",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "if4",
+            "request": "launch",
+            "mainClass": "a0314.if4",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "if5",
+            "request": "launch",
+            "mainClass": "a0314.if5",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "moverate",
+            "request": "launch",
+            "mainClass": "a0314.moverate",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "samhang",
+            "request": "launch",
+            "mainClass": "a0314.samhang",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "samhang1",
+            "request": "launch",
+            "mainClass": "a0314.samhang1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "scanner1",
+            "request": "launch",
+            "mainClass": "a0314.scanner1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "scanner2",
+            "request": "launch",
+            "mainClass": "a0314.scanner2",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "scanner3",
+            "request": "launch",
+            "mainClass": "a0314.scanner3",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "scanner4",
+            "request": "launch",
+            "mainClass": "a0314.scanner4",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "sfda",
+            "request": "launch",
+            "mainClass": "a0314.sfda",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "break1",
+            "request": "launch",
+            "mainClass": "a0317.break1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "break1_1",
+            "request": "launch",
+            "mainClass": "a0317.break1_1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "break2",
+            "request": "launch",
+            "mainClass": "a0317.break2",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "break3",
+            "request": "launch",
+            "mainClass": "a0317.break3",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "continue1",
+            "request": "launch",
+            "mainClass": "a0317.continue1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "do_while1_1",
+            "request": "launch",
+            "mainClass": "a0317.do_while1_1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "ex",
+            "request": "launch",
+            "mainClass": "a0317.ex",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "ex111",
+            "request": "launch",
+            "mainClass": "a0317.ex111",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "ex222",
+            "request": "launch",
+            "mainClass": "a0317.ex222",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "exfor",
+            "request": "launch",
+            "mainClass": "a0317.exfor",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "exfor2",
+            "request": "launch",
+            "mainClass": "a0317.exfor2",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "exfor3",
+            "request": "launch",
+            "mainClass": "a0317.exfor3",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "exrandom",
+            "request": "launch",
+            "mainClass": "a0317.exrandom",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "exscan",
+            "request": "launch",
+            "mainClass": "a0317.exscan",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "exscan2",
+            "request": "launch",
+            "mainClass": "a0317.exscan2",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "exwhile",
+            "request": "launch",
+            "mainClass": "a0317.exwhile",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "for1",
+            "request": "launch",
+            "mainClass": "a0317.for1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "for2",
+            "request": "launch",
+            "mainClass": "a0317.for2",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "nested1",
+            "request": "launch",
+            "mainClass": "a0317.nested1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "while1_1",
+            "request": "launch",
+            "mainClass": "a0317.while1_1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "while1_2",
+            "request": "launch",
+            "mainClass": "a0317.while1_2",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "while2_1",
+            "request": "launch",
+            "mainClass": "a0317.while2_1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "while2_2",
+            "request": "launch",
+            "mainClass": "a0317.while2_2",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "while2_3",
+            "request": "launch",
+            "mainClass": "a0317.while2_3",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "arr1",
+            "request": "launch",
+            "mainClass": "a0318.arr1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "arr3_1",
+            "request": "launch",
+            "mainClass": "a0318.arr3_1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "arrEx1",
+            "request": "launch",
+            "mainClass": "a0318.arrEx1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "arrEx2",
+            "request": "launch",
+            "mainClass": "a0318.arrEx2",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "arrEx3",
+            "request": "launch",
+            "mainClass": "a0318.arrEx3",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "array1",
+            "request": "launch",
+            "mainClass": "a0318.array1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "cylinder",
+            "request": "launch",
+            "mainClass": "a0318.cylinder",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "evenodd",
+            "request": "launch",
+            "mainClass": "a0318.evenodd",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "ex(1)",
+            "request": "launch",
+            "mainClass": "a0318.ex",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "ex1",
+            "request": "launch",
+            "mainClass": "a0318.ex1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "ex1_1",
+            "request": "launch",
+            "mainClass": "a0318.ex1_1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "ex2",
+            "request": "launch",
+            "mainClass": "a0318.ex2",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "ex3",
+            "request": "launch",
+            "mainClass": "a0318.ex3",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "factorial",
+            "request": "launch",
+            "mainClass": "a0318.factorial",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "max1",
+            "request": "launch",
+            "mainClass": "a0318.max1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "method1",
+            "request": "launch",
+            "mainClass": "a0318.method1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "method2",
+            "request": "launch",
+            "mainClass": "a0318.method2",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "method3",
+            "request": "launch",
+            "mainClass": "a0318.method3",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "method4",
+            "request": "launch",
+            "mainClass": "a0318.method4",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "method5",
+            "request": "launch",
+            "mainClass": "a0318.method5",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "overloading",
+            "request": "launch",
+            "mainClass": "a0318.overloading",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "ramyun",
+            "request": "launch",
+            "mainClass": "a0318.ramyun",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "randomnumber",
+            "request": "launch",
+            "mainClass": "a0318.randomnumber",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "square",
+            "request": "launch",
+            "mainClass": "a0318.square",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "square1",
+            "request": "launch",
+            "mainClass": "a0318.square1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "Ch5_10",
+            "request": "launch",
+            "mainClass": "a0319.Ch5_10",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "Ch5_11",
+            "request": "launch",
+            "mainClass": "a0319.Ch5_11",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "Score",
+            "request": "launch",
+            "mainClass": "a0319.Score",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "array2",
+            "request": "launch",
+            "mainClass": "a0319.array2",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "array3_1",
+            "request": "launch",
+            "mainClass": "a0319.array3_1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "arraytoparameter",
+            "request": "launch",
+            "mainClass": "a0319.arraytoparameter",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "gugudan1",
+            "request": "launch",
+            "mainClass": "a0319.gugudan1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "home(1)",
+            "request": "launch",
+            "mainClass": "a0319.home",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "lotto1",
+            "request": "launch",
+            "mainClass": "a0319.lotto1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "maxmin1",
+            "request": "launch",
+            "mainClass": "a0319.maxmin1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "shuffle",
+            "request": "launch",
+            "mainClass": "a0319.shuffle",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "simplemerge",
+            "request": "launch",
+            "mainClass": "a0319.simplemerge",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "sum1",
+            "request": "launch",
+            "mainClass": "a0319.sum1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "topscore",
+            "request": "launch",
+            "mainClass": "a0319.topscore",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "topscore_1",
+            "request": "launch",
+            "mainClass": "a0319.topscore_1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "visitors",
+            "request": "launch",
+            "mainClass": "a0319.visitors",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "class1",
+            "request": "launch",
+            "mainClass": "a0320.class1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "class3",
+            "request": "launch",
+            "mainClass": "a0320.class3",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "class4",
+            "request": "launch",
+            "mainClass": "a0320.class4",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "class5",
+            "request": "launch",
+            "mainClass": "a0320.class5",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "class5_1",
+            "request": "launch",
+            "mainClass": "a0320.class5_1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "ex_class",
+            "request": "launch",
+            "mainClass": "a0320.ex_class",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "home_if",
+            "request": "launch",
+            "mainClass": "a0320.home_if",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "home_switch",
+            "request": "launch",
+            "mainClass": "a0320.home_switch",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "square(1)",
+            "request": "launch",
+            "mainClass": "a0320.square",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "sum1(1)",
+            "request": "launch",
+            "mainClass": "a0320.sum1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "sum2",
+            "request": "launch",
+            "mainClass": "a0320.sum2",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "word1",
+            "request": "launch",
+            "mainClass": "a0320.word1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "accounttest",
+            "request": "launch",
+            "mainClass": "a0321.account.accounttest",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "avengertest",
+            "request": "launch",
+            "mainClass": "a0321.account.avengertest",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "coffeetest",
+            "request": "launch",
+            "mainClass": "a0321.account.coffeetest",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "main2",
+            "request": "launch",
+            "mainClass": "a0321.account.main2",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "webtoontest",
+            "request": "launch",
+            "mainClass": "a0321.account.webtoontest",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "bankapp",
+            "request": "launch",
+            "mainClass": "a0321.bank.bankapp",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "bookapp",
+            "request": "launch",
+            "mainClass": "a0321.bank.bookapp",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "herotest",
+            "request": "launch",
+            "mainClass": "a0321.herotest",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "mymath1",
+            "request": "launch",
+            "mainClass": "a0321.mymath1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "studenttest",
+            "request": "launch",
+            "mainClass": "a0321.studenttest",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "Arraylist1",
+            "request": "launch",
+            "mainClass": "a0324.Arraylist1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "search",
+            "request": "launch",
+            "mainClass": "a0324.book1.search",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "car2main",
+            "request": "launch",
+            "mainClass": "a0324.car2main",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "library",
+            "request": "launch",
+            "mainClass": "a0324.doseo.library",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "tostring",
+            "request": "launch",
+            "mainClass": "a0324.doseo.tostring",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "main",
+            "request": "launch",
+            "mainClass": "a0324.game1.main",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "Main3",
+            "request": "launch",
+            "mainClass": "a0324.over.Main3",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "Main4",
+            "request": "launch",
+            "mainClass": "a0324.over.Main4",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "rpgtest1",
+            "request": "launch",
+            "mainClass": "a0324.rpg1.rpgtest1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "area1",
+            "request": "launch",
+            "mainClass": "a0324.rpg2.area1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "cartest",
+            "request": "launch",
+            "mainClass": "a0324.rpg2.cartest",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "con1",
+            "request": "launch",
+            "mainClass": "a0324.rpg2.con1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "overridingtest",
+            "request": "launch",
+            "mainClass": "a0324.rpg2.overridingtest",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "singletonmain",
+            "request": "launch",
+            "mainClass": "a0324.singletonmain",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "smartphonemain",
+            "request": "launch",
+            "mainClass": "a0324.smartphonemain",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "search(1)",
+            "request": "launch",
+            "mainClass": "a0324.숙소.a0324.숙소.search",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "upcastingtest",
+            "request": "launch",
+            "mainClass": "a0324.업캐스팅.upcastingtest",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "main1",
+            "request": "launch",
+            "mainClass": "a0325.abstract1.main1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "shapeex",
+            "request": "launch",
+            "mainClass": "a0325.abstract2.shapeex",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "a0325.car.Main",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "CRUDexemple",
+            "request": "launch",
+            "mainClass": "a0325.product1.CRUDexemple",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "coffeeEx",
+            "request": "launch",
+            "mainClass": "a0326.coffee.coffeeEx",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "coffeeorder",
+            "request": "launch",
+            "mainClass": "a0326.coffee.coffeeorder",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "map",
+            "request": "launch",
+            "mainClass": "a0326.collection.map",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "grademanager",
+            "request": "launch",
+            "mainClass": "a0326.grade.grademanager",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "strbuffer",
+            "request": "launch",
+            "mainClass": "a0326.string.strbuffer",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "stringEx",
+            "request": "launch",
+            "mainClass": "a0326.string.stringEx",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "stringEx2",
+            "request": "launch",
+            "mainClass": "a0326.string.stringEx2",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "defaultmethodEx",
+            "request": "launch",
+            "mainClass": "a0326.인터페이스.defaultmethodEx",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "interfaceEX",
+            "request": "launch",
+            "mainClass": "a0326.인터페이스.interfaceEX",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "mutilnterfaceEx",
+            "request": "launch",
+            "mainClass": "a0326.인터페이스.mutilnterfaceEx",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "animalmain",
+            "request": "launch",
+            "mainClass": "a0326.캐스팅.animalmain",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "Arrays1",
+            "request": "launch",
+            "mainClass": "a0327.Class1.Arrays1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "Enum1",
+            "request": "launch",
+            "mainClass": "a0327.Class1.Enum1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "Interger1",
+            "request": "launch",
+            "mainClass": "a0327.Class1.Interger1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "Product",
+            "request": "launch",
+            "mainClass": "a0327.Class1.Product",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "math1",
+            "request": "launch",
+            "mainClass": "a0327.Class1.math1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "Membership",
+            "request": "launch",
+            "mainClass": "a0327.Member.Membership",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "ExceptionEx01",
+            "request": "launch",
+            "mainClass": "a0327.exception1.ExceptionEx01",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "ExceptionEx02",
+            "request": "launch",
+            "mainClass": "a0327.exception1.ExceptionEx02",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "ExceptionEx03",
+            "request": "launch",
+            "mainClass": "a0327.exception1.ExceptionEx03",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "ExceptionEx04",
+            "request": "launch",
+            "mainClass": "a0327.exception1.ExceptionEx04",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "HashMapEX",
+            "request": "launch",
+            "mainClass": "a0327.mapEx.HashMapEX",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "HashMapEx1",
+            "request": "launch",
+            "mainClass": "a0327.mapEx.HashMapEx1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "HashMapEx2",
+            "request": "launch",
+            "mainClass": "a0327.mapEx.HashMapEx2",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "Word",
+            "request": "launch",
+            "mainClass": "a0327.wordList.Word",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "MainClass",
+            "request": "launch",
+            "mainClass": "a0328.book.MainClass",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "file1",
+            "request": "launch",
+            "mainClass": "a0328.file.file1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "file2",
+            "request": "launch",
+            "mainClass": "a0328.file.file2",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "file3",
+            "request": "launch",
+            "mainClass": "a0328.file.file3",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "file4",
+            "request": "launch",
+            "mainClass": "a0328.file.file4",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "file5",
+            "request": "launch",
+            "mainClass": "a0328.file.file5",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "file6",
+            "request": "launch",
+            "mainClass": "a0328.file.file6",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "file7",
+            "request": "launch",
+            "mainClass": "a0328.file.file7",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "input1",
+            "request": "launch",
+            "mainClass": "a0328.file.input1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "input2",
+            "request": "launch",
+            "mainClass": "a0328.file.input2",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "input3",
+            "request": "launch",
+            "mainClass": "a0328.file.input3",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "input4",
+            "request": "launch",
+            "mainClass": "a0328.file.input4",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "input5",
+            "request": "launch",
+            "mainClass": "a0328.file.input5",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "input6",
+            "request": "launch",
+            "mainClass": "a0328.file.input6",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "FileCreate",
+            "request": "launch",
+            "mainClass": "a0328.file1.FileCreate",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "FileHave",
+            "request": "launch",
+            "mainClass": "a0328.file1.FileHave",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "FileInfo",
+            "request": "launch",
+            "mainClass": "a0328.file1.FileInfo",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "file3_1",
+            "request": "launch",
+            "mainClass": "a0328.file1.file3_1",
+            "projectName": "vscodejava_588b0037"
+        },
+        {
+            "type": "java",
+            "name": "MainClass(1)",
+            "request": "launch",
+            "mainClass": "a0328.file2.MainClass",
+            "projectName": "vscodejava_588b0037"
+        }
+    ]
+}
