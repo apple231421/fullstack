@@ -54,15 +54,11 @@ public class Passenger { // 예매 정보를 저장하고 나이 검증을 수�
         this.seat = seat;
     }
 
-    /**
-     * 승객이 만 15세 이상인지 확인하는 메서드
-     * @return 15세 이상이면 true, 그렇지 않으면 false
-     */
-    public boolean man15() { 
+    public boolean man15() {
         // 생년월일에서 년, 월, 일을 추출
-        int y = birthDate / 10000;  // 년
-        int m = (birthDate % 10000) / 100;  // 월
-        int d = birthDate % 100;  // 일
+        int y = birthDate / 10000; // 년
+        int m = (birthDate % 10000) / 100; // 월
+        int d = birthDate % 100; // 일
 
         // 2자리 연도를 처리 (예: 83 -> 1983년, 25 -> 2025년)
         if (y <= 25) {
@@ -78,4 +74,6 @@ public class Passenger { // 예매 정보를 저장하고 나이 검증을 수�
         // 만 15세 이상이면 true 반환
         return age >= 15; // 15세 이상이면 true 반환
     }
+
+	
 }

@@ -37,6 +37,16 @@ public class FlightReservationMain {
                 case 3:// 예약조회
                     fm.checkReservation("예약조회");
                     break;
+                case 4:// 티켓 파일로 저장
+                    fm.tickeSave("티켓 저장");
+                    break;
+                case 5:// 항공편 업로드 -> 불러오기
+                    fc.upload();
+                    break;
+                case 0:
+                    System.out.println("프로그램을 종료합니다");
+                    sc.close();
+                    break Outter;
                 default:
                     break;
             }

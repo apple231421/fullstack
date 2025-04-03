@@ -3,7 +3,7 @@ package a0402.javaair;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
-public class fight {
+public class Flight {
     // 목적지, 비행시간, 금액 등의 정보를 다루는 클래스
     private String destination; // 목적지 (예: 제주, 방콕 등)
     private String time; // 비행시간 (예: 11:55)
@@ -13,7 +13,7 @@ public class fight {
     private ArrayList<String> seats; // 좌석 번호 리스트 (1번부터 20번까지)
 
     // 생성자: 항공편 정보와 좌석 초기화
-    public fight(String destination, String time, int price, Boolean internationalFlight) {
+    public Flight(String destination, String time, int price, Boolean internationalFlight) {
         this.destination = destination; // 목적지
         this.time = time; // 출발 시간
         this.price = price; // 가격
@@ -98,7 +98,7 @@ public class fight {
     public void seatToString() {
         // 좌석을 4개씩 묶어서 출력 (각 행에 4개의 좌석 번호를 표시)
         for (int i = 0; i < seats.size() - 3; i += 4) {
-            System.out.printf("|   [%2s]\t\t[%2s][%2s] \t [%2s]   |\n", seats.get(i), seats.get(i + 1),
+            System.out.printf("|   [%2s]\t\t[%2s][%2s] \t\t [%2s]   |\n", seats.get(i), seats.get(i + 1),
                     seats.get(i + 2), seats.get(i + 3));
         }
     }

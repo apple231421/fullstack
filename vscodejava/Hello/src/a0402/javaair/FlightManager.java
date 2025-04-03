@@ -7,22 +7,22 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class FlightManager {
-    private static ArrayList<fight> flights; // 항공편 정보를 저장 ArrayList
+    private static ArrayList<Flight> flights; // 항공편 정보를 저장 ArrayList
     private static ArrayList<Passenger> passengers; // 예약된 승객정보
 
     // 승객을 키로하고, 예약된 항공편을 값으로 가지는 Map
-    private static Map<String, fight> reservationMap = new HashMap<>();
+    private static Map<String, Flight> reservationMap = new HashMap<>();
 
     private static Filec fc = new Filec(); // 파일 관련작업
     Scanner sc = new Scanner(System.in);
 
     public FlightManager() {
         flights = new ArrayList<>();
-        flights.add(new fight("제주", "11:55", 380000, false));
-        flights.add(new fight("이스탄불", "17:10", 1200000, true));
-        flights.add(new fight("방콕", "21:35", 480000, true));
+        flights.add(new Flight("제주", "11:55", 380000, false));
+        flights.add(new Flight("이스탄불", "17:10", 1200000, true));
+        flights.add(new Flight("방콕", "21:35", 480000, true));
         passengers = new ArrayList<>();
-        fight sf = flights.get(0);
+        Flight sf = flights.get(0);
     }
 
     public String airplane = "                       |                      \n"
@@ -31,10 +31,11 @@ public class FlightManager {
             + " \\_________________\\       /_________________/\n"
             + "  `-------|---|-----\\_____/-----|---|-------'\n" + "         ( ) ( )  O|OOo|oOO|O  ( ) ( )   \n";
 
-    public void displayFlightList(String str) {
+    
+        public void displayFlightList(String str) {
         System.out.println("==========================" + str + "==========================");
         int count = 1;
-        for (fight flight : flights) {
+        for (Flight flight : flights) {
             System.out.println(count + " " + flight);
             count++;
         }
@@ -56,7 +57,7 @@ public class FlightManager {
                 System.out.println("==============================================================");
                 System.out.println(bookNum + " " + flights.get(bookNum - 1));
                 System.out.println("==============================================================");
-                fight sf = flights.get(bookNum - 1);
+                Flight sf = flights.get(bookNum - 1);
                 passengerInfo(sf);
 
                 // 승객이 등록되었고, 만약 승객이 국제선 예약을 시도하는데 15세 미만이라면 예약을 진행하지 않음
@@ -93,7 +94,7 @@ public class FlightManager {
         }
     }
 
-    private void passengerInfo(fight flight) { // 사용자 정보 입력
+    private void passengerInfo(Flight flight) { // 사용자 정보 입력
         System.out.println("예약자 정보를 입력하세요");
         System.out.print("이름 : ");
         String name = sc.next();
@@ -130,7 +131,7 @@ public class FlightManager {
         }
     }
 
-    private int setSelection(fight flight) {
+    private int setSelection(Flight flight) {
         int seatNum = -1;
         while (true) {
             try {
@@ -179,7 +180,7 @@ public class FlightManager {
         }
     }
 
-    private String ticketPrint(Map<String, fight> reservationMap, String name) {
+    String ticketPrint(Map<String, Flight> reservationMap, String name) {
         int index = -1;
         if (passengers != null) {
             for (int i = 0; i < passengers.size(); i++) {
@@ -214,5 +215,22 @@ public class FlightManager {
             }
         }
         return index;
+    }
+
+    // 티켓 파일로 저장
+    public void tickeSave(String string) {
+        int index = search("티켓 저장");
+        checkpassword(index);
+        fc.ticketSaveFile(reservationMap, passengers.get(index).getName());
+    }
+
+    // 항공편목록 flights을 외부에서 접근하는 getter메소드
+    public static ArrayList<Flight> getFlights() {
+        return flights;
+    }
+
+    
+    public static Map<String, Flight> getReservationMap() {
+        return reservationMap;
     }
 }
