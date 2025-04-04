@@ -7,14 +7,24 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Map;
 
-import a0402.javaair.Flight;
-import a0402.javaair.FlightManager;
+import java.util.Map;
 
 public class movie {
     private movieManager mm = new movieManager();
 
+    public void ticketSaveFile(Map<String, movieInfo> reservationMap, String name) {
+        try {
+            File file = new File("d:\\ticket\\ticket.txt");
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file));
+            if (file.isFile() && file.canWrite()) {
+                bufferedWriter.write(mm.ticketPrint(reservationMap, name)); // 티켓정보를 파일에 씀
+                bufferedWriter.flush();
+            }
+        } catch (IOException e) {
+            System.out.println("파일저장실패");
+        }
+    }
 
     public void update(String string) {
         try {

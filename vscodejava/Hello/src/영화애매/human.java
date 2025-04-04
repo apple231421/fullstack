@@ -4,8 +4,8 @@ import java.time.LocalDate;
 import java.time.Period;
 
 public class human {
-    private String name;
-    private int birthDate;
+    private String name; // 이름
+    private int birthDate; // 생년월일 ex) 011010
     private String pw; // 예약 번호
     private String seat; // 좌석 번호
 
@@ -68,7 +68,7 @@ public class human {
         LocalDate currentDate = LocalDate.now();
         int age = Period.between(birthDateObj, currentDate).getYears();
 
-        // 만 15세 이상이면 true 반환
-        return age >= 19; // 19세 이상이면 true 반환
+        // 19세 이상이면 true 반환
+        return age >= 19;
     }
 }
