@@ -11,7 +11,7 @@ public class movieMain {
         System.out.println("============== 더조은영화관에 오신걸 환영합니다. ==============\n");
 
         Outter: while (true) {
-            System.out.println("1. 상영영화 목록\n2. 영화 예매\n3. 예약 취소\n4. 예약 조회\n5. 티켓 발행\n6. 영화목록업데이트\n7. 영화 좌석보기\n0. 종료\n");
+            System.out.println("1. 상영영화 목록\n2. 영화 예매\n3. 예약 취소\n4. 예약 조회\n5. 티켓 발행\n6. 영화 좌석보기 \n7. 영화목록업데이트\n0. 종료\n");
             System.out.print("메뉴입력> ");
 
             String menustr = sc.next();
@@ -46,11 +46,11 @@ public class movieMain {
                 case 5:// 티켓 발행
                     mm.ticketPrint("티켓 발행");
                     break;
-                case 6:// 영화업데이트
-                    mf.update("영화목록 업데이트");
-                    break;
-                case 7:// 영화별 좌석보기
+                case 6:// 영화별 좌석보기
                     mm.seat("영화 좌석보기");
+                    break;
+                case 7:// 영화업데이트
+                    mf.update("영화목록 업데이트");
                     break;
                 case 0:
                     System.out.println("프로그램을 종료합니다");

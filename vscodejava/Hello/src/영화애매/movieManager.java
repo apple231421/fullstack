@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
+import a0317.continue1;
+
 public class movieManager {
     private static ArrayList<movieInfo> movies; // 영화 정보 저장
     private static ArrayList<human> humans; // 예약된 손님정보
@@ -21,9 +23,7 @@ public class movieManager {
         movies.add(new movieInfo("배고프다", "02:11", 10000, false));
         movies.add(new movieInfo("술 한잔해요", "02:11", 10000, true));
         humans = new ArrayList<>();
-        List<human> humans = new ArrayList<>();
         reservationMap = new HashMap<>(); // reservationMap 초기화
-        movieInfo mf = movies.get(0);
     }
 
     public String movieLogo = "                  ___________________________\n" +
@@ -42,24 +42,24 @@ public class movieManager {
             "       |   o   o       o   o   o   o   o       o   o   |\n" +
             "       |                                               |\n" +
             "       |_______________________________________________|\n" +
-            "               * * * * * * * * * * * * * * * *\n" +
-            "               Movie Theater - Enjoy the Show!\n";
+            "\n" +
+            "                         TJOEUN Movie\n";
 
     // 영화 목록
     public void moiveList(String str) {
-        System.out.println("==========================" + str + "==========================");
+        System.out.println("===============" + str + "==============\n");
         int count = 1;
         for (movieInfo movie : movies) {
-            System.out.println(count + " " + movie);
+            System.out.println("================== " + count + " 번" + "===================\n" + movie);
             count++;
         }
-        System.out.println("==============================================================");
+        System.out.println("==========================================");
         System.out.println();
     }
 
     // 영화 예약
     public void reservation() throws InterruptedException {
-        for (;;) {
+        for (;;) { // 조건없는 무한루프문
             moiveList("영화 예매");
             System.out.print("예매할 영화 번호 입력해주세요 : ");
             try {
@@ -71,7 +71,8 @@ public class movieManager {
 
                 System.out.println("선택한 영화");
                 System.out.println("==============================================================");
-                System.out.println(movieNum + " " + movies.get(movieNum - 1));
+                System.out.println(
+                        "================== " + movieNum + " 번" + "===================\n" + movies.get(movieNum - 1));
                 System.out.println("==============================================================");
                 movieInfo mf = movies.get(movieNum - 1);
                 humanInfo(mf); // 예약 진행
@@ -94,12 +95,11 @@ public class movieManager {
                         System.out.println("[" + humans.get(humans.size() - 1).getName() + "] 님의 예약 정보");
                         System.out.println();
                         reservationMap.put(humans.get(humans.size() - 1).getName(), mf);
-                        System.out.println(movieNum + " " + mf);
+                        System.out.println("================== " + movieNum + " 번" + "===================\n" + mf);
                         System.out.println("==============================================================");
                         System.out.println("잠시 후 메인 화면으로 이동합니다.");
                         Thread.sleep(2000);
-
-                        // 예약 정보를 맵에 추가
+                        System.out.println();
                         break; // 예약 후 종료하고 메인 메뉴로 돌아가도록
                     }
                 }
@@ -122,7 +122,7 @@ public class movieManager {
                 System.out.print("좌석번호를 선택해주세요 : ");
                 int seatInt = sc.nextInt() - 1;
                 sc.nextLine();
-                if (seatInt + 1 < 1 || seatInt + 1 > 64) {
+                if (seatInt + 1 < 1 || seatInt + 1 > 48) {
                     System.out.println("존재하지 않는 좌석입니다.");
                 } else if (mf.getSeats().get(seatInt).equals("XX")) {
                     System.out.println("이미 예약된 자석입니다.");
@@ -136,6 +136,7 @@ public class movieManager {
             } catch (InputMismatchException e) {
                 System.out.println("잘못된 입력입니다");
                 sc.nextLine();
+                continue;
             }
         }
         return seatNum;
@@ -169,7 +170,7 @@ public class movieManager {
             if (!p.age19() && mf.getAdultInfo()) {
                 System.out.println("만 19세 미만은 성인영화 예약 불가입니다.");
             } else {
-                System.out.println("결제 비밀번호를 입력하세요");
+                System.out.print("결제 비밀번호 : ");
                 String pw = sc.next();
                 p = new human(name, birthDate, pw);
                 humans.add(p); // 예약 명단에 손님 추가
@@ -229,16 +230,18 @@ public class movieManager {
 
             // 좌석 상태를 업데이트하여 출력
             canceledMovie.seatToString(); // 좌석 상태 출력 메서드 호출
-
+            System.out.println();
             System.out.println("[" + humanName + "]님의 예약이 취소되었습니다.");
+            System.out.println();
         } else {
             System.out.println("예약된 손님이 없습니다.");
+            System.out.println();
         }
     }
 
     // 비밀번호
     void checkpassword(int index) {
-        System.out.println("결제 비밀번호");
+        System.out.print("결제 비밀번호 : ");
         String num = sc.next();
         System.out.println();
         if (humans.get(index).getPw().equals(num)) {
@@ -262,8 +265,9 @@ public class movieManager {
         if (index != -1) {
             int seat = Integer.parseInt(humans.get(index).getSeat()) + 1;
             return "ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n\n" +
-                    "\t" + name + "님의 티켓정보" +
-                    "| 좌석 : " + seat + "번\n" +
+                    "    " + name + "님의 티켓정보" +
+                    " | 좌석 : " + seat + "번\n" +
+                    "==========================================\n" +
                     reservationMap.get(name) + "\n\n" +
                     "ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ";
         } else {
@@ -278,15 +282,26 @@ public class movieManager {
         String name = sc.next();
         sc.nextLine();
         int index = -1;
-        if (humans != null) {
+    
+        // humans 리스트가 비어 있지 않고, 예약자가 있는지 확인
+        if (humans != null && !humans.isEmpty()) {
             for (int i = 0; i < humans.size(); i++) {
                 if (humans.get(i).getName().equals(name)) {
                     index = i;
+                    break; // 예약자가 있으면 더 이상 반복하지 않음
                 }
             }
         }
-        return index;
+    
+        // 유효한 인덱스 체크
+        if (index == -1) {
+            System.out.println("예약자가 없습니다. 다시 입력해주세요.");
+            return search(str); // 재귀적으로 다시 이름을 검색
+        }
+    
+        return index; // 예약자가 있으면 인덱스를 반환
     }
+    
 
     // 예약 조회
     public void checkReservation(String string) {
@@ -313,7 +328,7 @@ public class movieManager {
         return reservationMap;
     }
 
-      // 영화 목록을 보여줌
+    // 영화 목록을 보여줌
     public void seat(String string) {
         moiveList("영화 목록");
         System.out.print("좌석을 확인할 영화 번호를 입력하세요 : ");
