@@ -8,6 +8,7 @@ public class movieMain {
         Scanner sc = new Scanner(System.in);
         System.out.println(mm.movieLogo);
         movie mf = new movie();
+        mf.initializeTicketFile();
         System.out.println("============== 더조은영화관에 오신걸 환영합니다. ==============\n");
 
         Outter: while (true) {

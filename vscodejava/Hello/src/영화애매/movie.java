@@ -11,7 +11,36 @@ import java.io.IOException;
 import java.util.Map;
 
 public class movie {
+
     private movieManager mm = new movieManager();
+
+    public void initializeTicketFile() {
+        try {
+            // 티켓 정보를 저장할 파일 경로
+            File file = new File("D:\\kimchanggyu\\vscodejava\\Hello\\src\\영화애매\\movielist\\ticket.txt");
+
+            // 파일이 존재하지 않으면 파일 생성
+            if (!file.exists()) {
+                // 디렉터리가 존재하지 않으면 디렉터리 생성
+                File dir = new File(file.getParent());
+                if (!dir.exists()) {
+                    dir.mkdirs(); // 디렉터리 없으면 생성
+                }
+                file.createNewFile(); // 파일을 생성
+                System.out.println("새로운 티켓 파일을 생성했습니다.");
+            }
+
+            // 파일을 초기화: 덮어쓰기 모드로 열기
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file, false)); // false로 덮어쓰기
+            bufferedWriter.write(""); // 파일 내용을 빈 문자열로 덮어쓰기
+            bufferedWriter.flush();
+            bufferedWriter.close();
+            System.out.println("티켓 파일이 초기화되었습니다.");
+
+        } catch (IOException e) {
+            System.out.println("파일 초기화 실패: " + e.getMessage());
+        }
+    }
 
     public void ticketSaveFile(Map<String, movieInfo> reservationMap, String name) {
         // 예약자가 없는 경우 오류를 방지
@@ -21,7 +50,8 @@ public class movie {
         }
 
         try {
-            File file = new File("d:\\ticket\\ticket.txt");
+            // 티켓 정보를 저장할 파일 경로
+            File file = new File("D:\\kimchanggyu\\vscodejava\\Hello\\src\\영화애매\\movielist\\ticket.txt");
 
             // 티켓 정보를 파일에 저장하기 전에 기존 내용을 읽어 중복 여부를 확인
             String ticketInfo = mm.ticketPrint(reservationMap, name); // 새로 추가할 티켓 정보
@@ -36,12 +66,14 @@ public class movie {
                     bufferedWriter.write(ticketInfo); // 티켓 정보를 파일에 씀
                     bufferedWriter.newLine(); // 새 줄에 작성
                     bufferedWriter.flush();
+                    bufferedWriter.close();
+                    System.out.println("티켓 정보가 저장되었습니다.");
                 }
             } else {
-                System.out.println("중복");
+                System.out.println("중복된 티켓 정보입니다.");
             }
         } catch (IOException e) {
-            System.out.println("파일 저장 실패");
+            System.out.println("파일 저장 실패: " + e.getMessage());
         }
     }
 
@@ -64,7 +96,7 @@ public class movie {
 
     public void update(String string) {
         try {
-            File file = new File("d:\\ticket\\schedule.txt");
+            File file = new File("D:\\kimchanggyu\\vscodejava\\Hello\\src\\영화애매\\movielist\\movielist.txt");
             BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
             String line;
             System.out.println("=========================================");
@@ -72,13 +104,13 @@ public class movie {
                 System.out.println(line);
                 String[] movie = line.split("/");
                 movieManager.getmovies().add(
-                        new movieInfo(movie[0], movie[1], Integer.parseInt(movie[2]), Boolean.parseBoolean(movie[3])));
+                        new movieInfo(movie[0], movie[1], Integer.parseInt(movie[2]),
+                                Boolean.parseBoolean(movie[3])));
             }
         } catch (FileNotFoundException e) {
-            System.out.println("schedule.txt 파일을 찾을수 없습니다");
+            System.out.println("movielist.txt 파일을 찾을수 없습니다");
         } catch (IOException e) {
             System.out.println("파일 읽기 실패");
         }
     }
-
 }

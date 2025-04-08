@@ -3,11 +3,10 @@ package 영화애매;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.InputMismatchException;
-import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
-import a0317.continue1;
+
 
 public class movieManager {
     private static ArrayList<movieInfo> movies; // 영화 정보 저장
@@ -170,15 +169,25 @@ public class movieManager {
             if (!p.age19() && mf.getAdultInfo()) {
                 System.out.println("만 19세 미만은 성인영화 예약 불가입니다.");
             } else {
-                System.out.print("결제 비밀번호 : ");
-                String pw = sc.next();
-                p = new human(name, birthDate, pw);
+                String pw = "";
+                boolean validPassword = false;
+                while (!validPassword) {
+                    System.out.print("결제 비밀번호 (4자리 이상) : ");
+                    pw = sc.next();
+
+                    // 비밀번호가 4자리 이상인지 확인
+                    if (pw.length() >= 4) {
+                        validPassword = true;
+                    } else {
+                        System.out.println("비밀번호는 4자리 이상이어야 합니다.");
+                    }
+                }
+                p = new human(name, birthDate, pw); // 비밀번호를 포함하여 human 객체 생성
                 humans.add(p); // 예약 명단에 손님 추가
             }
         } catch (NumberFormatException e) {
             System.out.println("잘못된 입력입니다. 생년월일을 숫자 6자리로 입력해주세요.");
         }
-
     }
 
     public void cancleReservation(movieManager movieManager, String name) {
@@ -253,7 +262,7 @@ public class movieManager {
     }
 
     // 티켓 출력
-    String ticketPrint(Map<String, movieInfo> reservationMap, String name) {
+    public String ticketPrint(Map<String, movieInfo> reservationMap, String name) {
         int index = -1;
         if (humans != null) {
             for (int i = 0; i < humans.size(); i++) {
@@ -282,7 +291,7 @@ public class movieManager {
         String name = sc.next();
         sc.nextLine();
         int index = -1;
-    
+
         // humans 리스트가 비어 있지 않고, 예약자가 있는지 확인
         if (humans != null && !humans.isEmpty()) {
             for (int i = 0; i < humans.size(); i++) {
@@ -292,16 +301,14 @@ public class movieManager {
                 }
             }
         }
-    
+
         // 유효한 인덱스 체크
         if (index == -1) {
             System.out.println("예약자가 없습니다. 다시 입력해주세요.");
-            return search(str); // 재귀적으로 다시 이름을 검색
         }
-    
+
         return index; // 예약자가 있으면 인덱스를 반환
     }
-    
 
     // 예약 조회
     public void checkReservation(String string) {
