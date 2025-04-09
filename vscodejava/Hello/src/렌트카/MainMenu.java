@@ -1,5 +1,7 @@
 package 렌트카;
 
+import java.util.ArrayList;
+
 class MainMenu extends AbstractMenu {
 
     private static final MainMenu instance = new MainMenu(null);
@@ -11,8 +13,8 @@ class MainMenu extends AbstractMenu {
     private static final String MAIN_MENU_TEXT = "1. 렌트카 대여하기 \n" +
             "2. 렌트카 대여확인하기 \n" +
             "3. 렌트카 반납하기 \n" +
-            "4. 렌트카 대여 확인증 발급하기" +
-            "5. 관리자 모드" +
+            "4. 렌트카 대여 확인증 발급하기 \n" +
+            "5. 관리자 모드 \n" +
             "0. 종료";
 
     public MainMenu(Menu prevMenu) {
@@ -70,8 +72,20 @@ class MainMenu extends AbstractMenu {
     }
 
     private void Rent() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'Rent'");
+        try {
+            ArrayList<Car> cars = Car.findAll();
+            for(int i = 0; i<cars.size();i++){
+                System.out.printf("%s\n",cars.get(i).toString());
+            }
+        System.out.println("렌트할 차량을 선택해주세요");
+        String carIdStr = sc.nextLine();
+        Car c = Car.findById(carIdStr);
+        ArrayList<RentCar>rentCars =RentCar.findByCarId(carIdStr);
+        Count counts = new Count(rentCars);
+
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
     }
 
 }

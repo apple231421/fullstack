@@ -1,5 +1,10 @@
 package 렌트카;
 
+import java.io.IOException;
+import java.util.ArrayList;
+
+import a1206.movie.Movie;
+
 public class AdminMenu extends AbstractMenu {
 
     private static final AdminMenu instance = new AdminMenu(prevMenu);
@@ -39,17 +44,37 @@ public class AdminMenu extends AbstractMenu {
     }
 
     private void deleteCar() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'deleteCar'");
+        printAllRentCar();
+        System.out.println("폐차할 자동차를 선택하세요");
+        try {
+            Car.delete(sc.nextLine());
+        } catch (IOException e) {
+            System.out.println(">>폐차 실패");
+        }
     }
 
     private void printAllRentCar() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'printAllRentCar'");
+        try {
+            ArrayList<Car> cars = Car.findAll();
+            System.out.println();
+            for (int i = 0; i < cars.size(); i++) {
+                System.out.printf("%s\n", cars.get(i).toString());
+            }
+        } catch (IOException e) {
+            System.out.println("데이터 접근에 실패"); // 예회처리
+        }
     }
 
     private void addRentCar() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'addRentCar'");
+        System.out.println("차량 이름 : ");
+        String name = sc.nextLine();
+        System.out.println("차량 종류 : ");
+        String genre = sc.nextLine();
+        Car car = new Car(name, genre);
+        try {
+            car.save();
+        } catch (IOException e) {
+            System.out.println(">> 실패하였습니다.");
+        }
     }
 }
