@@ -3,8 +3,6 @@ package 렌트카;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import a1206.movie.Movie;
-
 public class AdminMenu extends AbstractMenu {
 
     private static final AdminMenu instance = new AdminMenu(prevMenu);
@@ -12,7 +10,8 @@ public class AdminMenu extends AbstractMenu {
             "1: 렌트카 등록하기\n" +
                     "2: 렌트카 목록 보기\n" +
                     "3: 렌트카 폐차하기\n" +
-                    "4: 메인 메뉴로 이동\n\n" +
+                    "4: 렌트카 현황보기\n" +
+                    "5: 메인 메뉴로 이동\n\n" +
                     "메뉴를 선택하세요: ";
 
     public AdminMenu(Menu prevMenu) {
@@ -37,9 +36,63 @@ public class AdminMenu extends AbstractMenu {
                 deleteCar(); // 폐차
                 return this;
             case "4":
+                RentCarStatus();
+                return this;
+            case "5":
                 return prevMenu;
             default:
                 return this;
+        }
+    }
+
+    private void RentCarStatus() {
+        try {
+            // 전체 차량 목록 가져오기
+            ArrayList<Car> cars = Car.findAll();
+            if (cars == null || cars.isEmpty()) {
+                System.out.println(">> 등록된 차량이 없습니다.");
+                return;
+            }
+
+            System.out.println("\n====================================");
+            System.out.println("         렌트카 현황 조회           ");
+            System.out.println("====================================");
+            System.out.printf("%-5s %-15s %-10s%n", "번호", "차량명", "현황");
+            System.out.println("------------------------------------");
+
+            // 각 차량별 현황 출력
+            for (Car car : cars) {
+                try {
+                    // 해당 차량의 대여 정보 확인
+                    ArrayList<RentCar> rentCars = RentCar.findByCarId(car.getId() + ""); // 문자열로 명시적 변환
+
+                    // rentCars가 null인 경우 새 ArrayList 생성
+                    if (rentCars == null) {
+                        rentCars = new ArrayList<>();
+                    }
+
+                    Count count = new Count(rentCars);
+                    int available = count.getAvailableCount();
+
+                    // 차량 정보 출력
+                    System.out.printf("%-5d %-15s %-10s%n",
+                            car.getId(),
+                            car.getName(),
+                            "대여가능: " + available + "대");
+
+                } catch (Exception ex) {
+                    System.out.println(">> 차량 정보 조회 중 오류가 발생했습니다: " + ex.getMessage());
+                }
+            }
+
+            System.out.println("====================================");
+            System.out.println("         조회가 완료되었습니다     ");
+            System.out.println("====================================\n");
+
+        } catch (IOException e) {
+            System.out.println(">> 파일 처리 중 오류가 발생했습니다: " + e.getMessage());
+        } catch (Exception e) {
+            System.out.println(">> 시스템 오류가 발생했습니다: " + e.getMessage());
         }
     }
 
@@ -56,12 +109,22 @@ public class AdminMenu extends AbstractMenu {
     private void printAllRentCar() {
         try {
             ArrayList<Car> cars = Car.findAll();
-            System.out.println();
-            for (int i = 0; i < cars.size(); i++) {
-                System.out.printf("%s\n", cars.get(i).toString());
+
+            // 데이터가 비어있는 경우 처리
+            if (cars.isEmpty()) {
+                System.out.println("등록된 차량이 없습니다.");
+                return;
             }
+
+            System.out.println("\n=== 등록된 차량 목록 ===");
+            for (Car car : cars) { // 향상된 for문 사용
+                System.out.println(car.toString());
+            }
+            System.out.println("=====================");
+
         } catch (IOException e) {
-            System.out.println("데이터 접근에 실패"); // 예회처리
+            System.out.println("데이터 접근에 실패했습니다: " + e.getMessage());
+            e.printStackTrace(); // 디버깅을 위한 스택 트레이스 출력
         }
     }
 

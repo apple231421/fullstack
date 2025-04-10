@@ -3,21 +3,99 @@ package 렌트카;
 import java.util.ArrayList;
 
 public class Count {
-    public static final int MAX_ROW = 5;// 최대행의수
-    public static final int MAX_COL = 5;// 최대열의수
-    private String[][] map = new String[MAX_ROW][MAX_COL]; // 좌석의 예매 현황
+    private int totalCount; // 총 차량 수
+    private int rentedCount; // 대여된 차량 수
+    private int availableCount; // 대여 가능한 차량 수
+    private ArrayList<RentCar> rentCars;
 
-    public Count(ArrayList<RentCar> rentCars) throws Exception {
-        for (int i = 0; i < MAX_ROW; i++) {
-            for (int j = 0; j < MAX_COL; j++) {
-                map[i][j] = "O";
-            }
+    public Count(ArrayList<RentCar> rentCars) {
+        this.rentCars = rentCars;
+        this.totalCount = 5; // 초기 총 차량 수를 5대로 설정
+        
+        // rentCars가 null인 경우 처리
+        if (rentCars == null) {
+            this.rentedCount = 0;
+        } else {
+            this.rentedCount = calculateRentedCount(rentCars);
         }
-        for (int i = 0; i < rentCars.size(); i++) {
-            RentCar c = rentCars.get(i);
-            String carcount = c.getCarcount();
-            mark(carcount);
-        }
+        
+        this.availableCount = this.totalCount - this.rentedCount;
     }
 
+    // 현재 대여된 총 수량 계산
+    private int calculateRentedCount(ArrayList<RentCar> rentCars) {
+        int total = 0;
+        for (RentCar car : rentCars) {
+            // null 체크 추가
+            if (car != null && !car.isReturned()) {
+                String carCount = car.getCarcount();
+                // null 체크 추가
+                if (carCount != null && !carCount.trim().isEmpty()) {
+                    try {
+                        total += Integer.parseInt(carCount);
+                    } catch (NumberFormatException e) {
+                        System.err.println("잘못된 수량 형식: " + carCount);
+                    }
+                }
+            }
+        }
+        return total;
+    }
+
+    // 차량 대여 처리
+    public void markRented(int count) throws Exception {
+        if (count <= 0) {
+            throw new Exception("잘못된 대여 수량입니다.");
+        }
+
+        if (availableCount < count) {
+            throw new Exception("대여 가능한 차량이 부족합니다. (가능 수량: " + availableCount + ")");
+        }
+
+        rentedCount += count;
+        availableCount -= count;
+    }
+
+    // 차량 반납 처리
+    public void returnCar(int count) throws Exception {
+        if (count <= 0) {
+            throw new Exception("잘못된 반납 수량입니다.");
+        }
+
+        if (rentedCount < count) {
+            throw new Exception("대여된 수량보다 많은 수량을 반납할 수 없습니다.");
+        }
+
+        rentedCount -= count;
+        availableCount += count;
+    }
+
+    // 현재 차량 현황 표시
+    public void show() {
+        System.out.println("--------------------");
+        System.out.println(" R E N T C A R");
+        System.out.println("--------------------");
+        System.out.println("총 보유 차량: " + totalCount + "대");
+        System.out.println("대여중인 차량: " + rentedCount + "대");
+        System.out.println("대여 가능 차량: " + availableCount + "대");
+        System.out.println("--------------------");
+    }
+
+    // 차량 대여 가능 여부 확인
+    public boolean isAvailable(int count) {
+        return count > 0 && availableCount >= count;
+    }
+
+    // Getter 메소드들
+    public int getTotalCount() {
+        return totalCount;
+    }
+
+    public int getRentedCount() {
+        return rentedCount;
+    }
+
+    public int getAvailableCount() {
+        return availableCount;
+    }
 }
