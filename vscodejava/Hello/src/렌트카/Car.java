@@ -4,45 +4,86 @@ import java.io.*;
 import java.time.Instant;
 import java.util.ArrayList;
 
+// 차량(Car) 정보를 다루는 클래스
 public class Car {
-    private String id;
-    private String name;
-    private String genre;
+    private String id; // 차량 ID (고유값)
+    private String name; // 차량 이름 (차종)
+    private String genre; // 차량 종류 (예: SUV, 세단 등)
 
-    private static final File file = new File("D:\\kimchanggyu\\vscodejava\\Hello\\src\\렌트카\\Carlist\\Carlist.txt");
+    // 차량 정보를 저장하는 파일 경로 설정
+    private static final File file = new File("D:\\kimchanggyu\\vscodejava\\Hello\\src\\렌트카\\Carlist.txt");
 
-    // 생성자
+    // 정적 블록: 프로그램 시작 시 파일과 디렉토리 자동 생성
+    static {
+        try {
+            File parentDir = file.getParentFile();
+            if (!parentDir.exists()) {
+                parentDir.mkdirs(); // 디렉토리 생성
+            }
+
+            if (!file.exists()) {
+                file.createNewFile(); // 파일 생성
+            }
+        } catch (IOException e) {
+            System.err.println("파일 또는 디렉토리 생성 실패: " + e.getMessage());
+        }
+    }
+
+    // 파일에서 불러올 때 사용하는 생성자
     public Car(String id, String name, String genre) {
         this.id = id;
         this.name = name;
         this.genre = genre;
     }
 
-    // 새로운 차량 등록용 생성자
+    // 신규 등록용 생성자: 고유 ID를 현재 시간(초)로 생성
     public Car(String name, String genre) {
-        this.id = String.valueOf(Instant.now().getEpochSecond()); // String으로 변환
+        this.id = String.valueOf(Instant.now().getEpochSecond());
         this.name = name;
         this.genre = genre;
     }
 
-    // Getter 메소드들
-    public String getId() { return id; }
-    public String getName() { return name; }
-    public String getGenre() { return genre; }
-
-    // 파일에 저장할 문자열 형식 생성
-    private String toFileString() {
-        return String.format("%s,%s,%s", id, name, genre); // genre가 아닌 name 사용
+    public String getId() {
+        return id;
     }
 
-    // 차량 정보 저장
+    public String getName() {
+        return name;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+
+    // 차량 정보를 파일에 저장할 문자열 포맷
+    private String toFileString() {
+        return String.format("%s,%s,%s", id, name, genre);
+    }
+
+    // 차량 정보를 파일에 저장
     public void save() throws IOException {
+        File parentDir = file.getParentFile();
+        if (!parentDir.exists()) {
+            parentDir.mkdirs(); // 디렉토리가 삭제됐을 경우 대비
+        }
+
         try (FileWriter fw = new FileWriter(file, true)) {
             fw.write(this.toFileString() + "\n");
         }
     }
 
-    // 모든 차량 정보 조회
+    public static void maincar() throws IOException {
+        ArrayList<Car> cars = findAll();
+        if (cars.isEmpty()) {
+            System.out.println(">> 기본 차량 데이터를 초기화합니다.");
+
+            new Car("아반떼", "세단").save();
+            new Car("카니발", "RV").save();
+            new Car("소나타", "세단").save();
+        }
+    }
+
+    // 파일에서 모든 차량 목록 불러오기
     public static ArrayList<Car> findAll() throws IOException {
         ArrayList<Car> cars = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
@@ -62,7 +103,7 @@ public class Car {
         return cars;
     }
 
-    // 차량 삭제
+    // 차량 ID로 특정 차량 삭제
     public static void delete(String carIdStr) throws IOException {
         StringBuilder text = new StringBuilder();
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
@@ -70,17 +111,21 @@ public class Car {
             while ((line = br.readLine()) != null) {
                 String[] temp = line.split(",");
                 if (!carIdStr.equals(temp[0])) {
-                    text.append(line).append("\n");
+                    text.append(line).append("\n"); // 삭제 대상이 아니면 유지
                 }
             }
         }
-        
+
+        // 파일 덮어쓰기
         try (FileWriter fw = new FileWriter(file)) {
             fw.write(text.toString());
         }
+
+        // 차량 삭제 시 해당 차량의 렌트 기록도 같이 삭제
+        RentCar.deleteByCarId(carIdStr);
     }
 
-    // ID로 차량 검색
+    // 차량 ID로 검색
     public static Car findById(String carIdStr) throws IOException {
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             String line;
@@ -91,10 +136,10 @@ public class Car {
                 }
             }
         }
-        return null;
+        return null; // 찾지 못했을 경우
     }
 
-    // toString 메소드 오버라이드
+    // 차량 정보 출력용 toString() 오버라이드
     @Override
     public String toString() {
         return String.format("차량ID: %s, 차종: %s, 종류: %s", id, name, genre);

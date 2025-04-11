@@ -10,7 +10,7 @@ public class Count {
 
     public Count(ArrayList<RentCar> rentCars) {
         this.rentCars = rentCars;
-        this.totalCount = 5; // 초기 총 차량 수를 5대로 설정
+        this.totalCount = 10; // 초기 총 차량 수를 5대로 설정
         
         // rentCars가 null인 경우 처리
         if (rentCars == null) {
@@ -26,10 +26,8 @@ public class Count {
     private int calculateRentedCount(ArrayList<RentCar> rentCars) {
         int total = 0;
         for (RentCar car : rentCars) {
-            // null 체크 추가
             if (car != null && !car.isReturned()) {
                 String carCount = car.getCarcount();
-                // null 체크 추가
                 if (carCount != null && !carCount.trim().isEmpty()) {
                     try {
                         total += Integer.parseInt(carCount);
@@ -86,7 +84,7 @@ public class Count {
         return count > 0 && availableCount >= count;
     }
 
-    // Getter 메소드들
+    
     public int getTotalCount() {
         return totalCount;
     }

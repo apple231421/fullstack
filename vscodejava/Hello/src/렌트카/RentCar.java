@@ -5,19 +5,33 @@ import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 
+// 렌트카 대여 기록을 관리하는 클래스
 public class RentCar {
-    private long id; // 발급번호
-    private long carId; // 차 대표값
-    private String carName; // 차 이름
-    private String carCount; // 차 수량
+    private long id; // 렌트 발급번호 (고유)
+    private long carId; // 차량 ID
+    private String carName; // 차량 이름
+    private String carCount; // 수량
     private boolean isReturned; // 반납 여부
 
-    private static final String DIRECTORY_PATH = "D:\\kimchanggyu\\vscodejava\\Hello\\src\\렌트카\\VIN.txt";
-    private static final String FILE_NAME = "VIN";
-    private static final File directory = new File(DIRECTORY_PATH);
-    private static final File file = new File(directory, FILE_NAME);
+    // 렌트 정보 저장 파일
+    private static final File file = new File("D:\\kimchanggyu\\vscodejava\\Hello\\src\\렌트카\\VIN.txt");
 
-    // 기존 생성자들
+    // 정적 초기화 블록: 파일 및 디렉토리 없으면 자동 생성
+    static {
+        try {
+            File parentDir = file.getParentFile();
+            if (!parentDir.exists()) {
+                parentDir.mkdirs(); // 디렉토리 생성
+            }
+            if (!file.exists()) {
+                file.createNewFile(); // 파일 생성
+            }
+        } catch (IOException e) {
+            System.err.println("파일 또는 디렉토리 생성 실패: " + e.getMessage());
+        }
+    }
+
+    // 전체 필드를 받아서 객체 생성 (파일 로딩 시 사용)
     public RentCar(long id, long carId, String carName, String carCount) {
         this.id = id;
         this.carId = carId;
@@ -26,15 +40,16 @@ public class RentCar {
         this.isReturned = false;
     }
 
+    // 신규 렌트카 대여 등록 시 사용되는 생성자
     public RentCar(long carId, String carName, String carCount) {
-        this.id = Instant.now().toEpochMilli();
+        this.id = Instant.now().toEpochMilli(); // 현재 시각을 ID로 사용
         this.carId = carId;
         this.carName = carName;
         this.carCount = carCount;
         this.isReturned = false;
     }
 
-    // Getter 메소드들
+    // Getter 메소드
     public long getId() {
         return id;
     }
@@ -55,11 +70,10 @@ public class RentCar {
         return isReturned;
     }
 
-    // 렌트 번호로 검색하는 새로운 메소드
+    // 렌트 번호(ID)로 렌트카 정보 검색
     public static RentCar findByRentId(String rentId) throws IOException {
-        if (!file.exists()) {
+        if (!file.exists())
             return null;
-        }
 
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             String line;
@@ -80,30 +94,29 @@ public class RentCar {
     // 차량 반납 처리
     public void returnCar() throws IOException {
         this.isReturned = true;
-        updateRentStatus();
+        updateRentStatus(); // 파일에서 반납 상태 갱신
     }
 
-    // 렌트 상태 업데이트
+    // 렌트 상태 업데이트 (반납 처리된 항목 제외하고 다시 저장)
     private void updateRentStatus() throws IOException {
         List<String> fileContents = new ArrayList<>();
         boolean found = false;
 
-        // 파일 내용 읽기
         if (file.exists()) {
             try (BufferedReader br = new BufferedReader(new FileReader(file))) {
                 String line;
                 while ((line = br.readLine()) != null) {
                     String[] temp = line.split(",");
                     if (temp[0].equals(String.valueOf(this.id))) {
-                        found = true;
-                        continue; // 반납된 항목은 제외
+                        found = true; // 반납 대상
+                        continue; // 제외
                     }
-                    fileContents.add(line);
+                    fileContents.add(line); // 유지할 기록
                 }
             }
         }
 
-        // 파일 다시 쓰기
+        // 파일 다시 저장
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(file))) {
             for (String line : fileContents) {
                 bw.write(line);
@@ -116,13 +129,12 @@ public class RentCar {
         }
     }
 
-    // 기존의 findByCarId 메소드
+    // 차량 ID로 대여된 기록을 모두 가져오기
     public static ArrayList<RentCar> findByCarId(String carId) throws IOException {
         ArrayList<RentCar> rentCars = new ArrayList<>();
 
-        if (!file.exists()) {
+        if (!file.exists())
             return rentCars;
-        }
 
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             String line;
@@ -130,11 +142,10 @@ public class RentCar {
                 String[] temp = line.split(",");
                 if (temp.length >= 4 && temp[1].equals(carId)) {
                     RentCar rentCar = new RentCar(
-                            Long.parseLong(temp[0]), // id
-                            Long.parseLong(temp[1]), // carId
-                            temp[2], // carName
-                            temp[3] // carCount
-                    );
+                            Long.parseLong(temp[0]),
+                            Long.parseLong(temp[1]),
+                            temp[2],
+                            temp[3]);
                     rentCars.add(rentCar);
                 }
             }
@@ -145,10 +156,11 @@ public class RentCar {
         return rentCars;
     }
 
-    // 파일 저장
+    // 렌트카 기록 저장
     public void save() throws IOException {
-        if (!directory.exists()) {
-            directory.mkdirs();
+        File parentDir = file.getParentFile();
+        if (!parentDir.exists()) {
+            parentDir.mkdirs(); // 디렉토리 생성
         }
 
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(file, true))) {
@@ -158,14 +170,16 @@ public class RentCar {
         }
     }
 
+    // 데이터 유효성 검사
     private static boolean isValidData(String[] data) {
         return data != null && data.length >= 4 &&
-                data[0] != null && !data[0].trim().isEmpty() &&
-                data[1] != null && !data[1].trim().isEmpty() &&
-                data[2] != null && !data[2].trim().isEmpty() &&
-                data[3] != null && !data[3].trim().isEmpty();
+                !data[0].trim().isEmpty() &&
+                !data[1].trim().isEmpty() &&
+                !data[2].trim().isEmpty() &&
+                !data[3].trim().isEmpty();
     }
 
+    // 반납 처리: 해당 렌트 기록을 제거
     public void markAsReturned() throws IOException {
         if (this.isReturned) {
             throw new IllegalStateException("이미 반납된 차량입니다.");
@@ -174,23 +188,20 @@ public class RentCar {
         List<String> fileContents = new ArrayList<>();
         boolean found = false;
 
-        // 파일 읽기
         if (file.exists()) {
             try (BufferedReader br = new BufferedReader(new FileReader(file))) {
                 String line;
                 while ((line = br.readLine()) != null) {
                     String[] temp = line.split(",");
                     if (temp[0].equals(String.valueOf(this.id))) {
-                        found = true;
-                        // 반납된 항목은 저장하지 않음
+                        found = true; // 해당 렌트 기록은 제거
                     } else {
-                        fileContents.add(line);
+                        fileContents.add(line); // 나머지 유지
                     }
                 }
             }
         }
 
-        // 파일 다시 쓰기
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(file))) {
             for (String line : fileContents) {
                 bw.write(line);
@@ -205,7 +216,29 @@ public class RentCar {
         this.isReturned = true;
     }
 
-    // toString 메서드 수정
+    // 차량 ID에 해당하는 모든 렌트 기록 삭제 (폐차 시 사용)
+    public static void deleteByCarId(String carIdStr) throws IOException {
+        List<String> remainingRecords = new ArrayList<>();
+
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] temp = line.split(",");
+                if (!carIdStr.equals(temp[1])) {
+                    remainingRecords.add(line);
+                }
+            }
+        }
+
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(file))) {
+            for (String record : remainingRecords) {
+                bw.write(record);
+                bw.newLine();
+            }
+        }
+    }
+
+    // 출력용 문자열
     @Override
     public String toString() {
         return String.format("발급번호: %d, 차량ID: %d, 차종: %s, 수량: %s, 상태: %s",

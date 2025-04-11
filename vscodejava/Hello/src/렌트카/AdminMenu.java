@@ -3,135 +3,156 @@ package 렌트카;
 import java.io.IOException;
 import java.util.ArrayList;
 
+// 관리자 메뉴 클래스 (렌트카 등록/목록/폐차/현황 등 제공)
 public class AdminMenu extends AbstractMenu {
 
+    // 싱글톤 패턴 적용: 하나의 AdminMenu 인스턴스만 사용
     private static final AdminMenu instance = new AdminMenu(prevMenu);
-    private static final String ADMIN_MENU_TEXT = // 기본 문구
-            "1: 렌트카 등록하기\n" +
-                    "2: 렌트카 목록 보기\n" +
-                    "3: 렌트카 폐차하기\n" +
-                    "4: 렌트카 현황보기\n" +
-                    "5: 메인 메뉴로 이동\n\n" +
-                    "메뉴를 선택하세요: ";
 
+    // 출력할 관리자 메뉴 텍스트
+    private static final String ADMIN_MENU_TEXT = "1: 렌트카 등록하기\n" +
+            "2: 렌트카 목록 보기\n" +
+            "3: 렌트카 폐차하기\n" +
+            "4: 렌트카 현황보기\n" +
+            "5: 메인 메뉴로 이동\n";
+
+    // 생성자: 메뉴 텍스트와 이전 메뉴 설정
     public AdminMenu(Menu prevMenu) {
         super(ADMIN_MENU_TEXT, prevMenu);
-
     }
 
+    // 싱글톤 인스턴스 반환
     public static AdminMenu getInstance() {
         return instance;
     }
 
+    // 사용자 입력에 따라 다음 메뉴 또는 기능 실행
     @Override
     public Menu next() {
         switch (sc.nextLine()) {
             case "1":
-                addRentCar(); // 렌트카 추가
+                addRentCar(); // 렌트카 등록
                 return this;
             case "2":
-                printAllRentCar(); // 렌트카 목록보기
+                printAllRentCar(); // 렌트카 목록 출력
                 return this;
             case "3":
-                deleteCar(); // 폐차
+                deleteCar(); // 렌트카 폐차
                 return this;
             case "4":
-                RentCarStatus();
+                RentCarStatus(); // 렌트카 현황 보기
                 return this;
             case "5":
-                return prevMenu;
+                return prevMenu; // 메인 메뉴로 이동
             default:
-                return this;
+                return this; // 잘못된 입력 시 현재 메뉴 유지
         }
     }
 
+    // 렌트카 현황 출력 (총수량, 대여중, 대여가능)
     private void RentCarStatus() {
         try {
-            // 전체 차량 목록 가져오기
             ArrayList<Car> cars = Car.findAll();
             if (cars == null || cars.isEmpty()) {
                 System.out.println(">> 등록된 차량이 없습니다.");
                 return;
             }
 
-            System.out.println("\n====================================");
-            System.out.println("         렌트카 현황 조회           ");
-            System.out.println("====================================");
-            System.out.printf("%-5s %-15s %-10s%n", "번호", "차량명", "현황");
-            System.out.println("------------------------------------");
+            // 현황 헤더 출력
+            System.out.println("=================================================");
+            System.out.println("                렌트카 현황 조회                  ");
+            System.out.println("=================================================");
+            System.out.printf("%-12s %-15s%n", "차량ID", "차종");
+            System.out.println("-------------------------------------------------");
 
             // 각 차량별 현황 출력
             for (Car car : cars) {
                 try {
-                    // 해당 차량의 대여 정보 확인
-                    ArrayList<RentCar> rentCars = RentCar.findByCarId(car.getId() + ""); // 문자열로 명시적 변환
-
-                    // rentCars가 null인 경우 새 ArrayList 생성
-                    if (rentCars == null) {
-                        rentCars = new ArrayList<>();
-                    }
-
+                    ArrayList<RentCar> rentCars = RentCar.findByCarId(car.getId());
                     Count count = new Count(rentCars);
-                    int available = count.getAvailableCount();
 
-                    // 차량 정보 출력
-                    System.out.printf("%-5d %-15s %-10s%n",
+                    System.out.printf("%-12s %-10s 총수량:%-2d  대여중 : %-2d    대여가능: %-2d%n",
                             car.getId(),
                             car.getName(),
-                            "대여가능: " + available + "대");
+                            count.getTotalCount(),
+                            count.getRentedCount(),
+                            count.getAvailableCount());
 
                 } catch (Exception ex) {
-                    System.out.println(">> 차량 정보 조회 중 오류가 발생했습니다: " + ex.getMessage());
+                    System.out.println(">> 차량 정보 출력 중 오류가 발생했습니다.");
                 }
             }
 
-            System.out.println("====================================");
-            System.out.println("         조회가 완료되었습니다     ");
-            System.out.println("====================================\n");
+            System.out.println("=================================================");
 
         } catch (IOException e) {
-            System.out.println(">> 파일 처리 중 오류가 발생했습니다: " + e.getMessage());
+            System.out.println(">> 파일 처리 중 오류가 발생했습니다.");
         } catch (Exception e) {
-            System.out.println(">> 시스템 오류가 발생했습니다: " + e.getMessage());
+            System.out.println(">> 시스템 오류가 발생했습니다.");
         }
     }
 
+    // (현재는 미사용) 표 형태의 렌트카 현황 출력용 헤더
+    private void printHeader() {
+        System.out.println("\n=================================================");
+        System.out.println("                렌트카 현황 조회                  ");
+        System.out.println("=================================================");
+        System.out.printf("%-10s %-15s %8s %8s %10s%n",
+                "차량ID", "차종", "총수량", "대여중", "대여가능");
+        System.out.println("-------------------------------------------------");
+    }
+
+    // 차량 폐차 처리
     private void deleteCar() {
-        printAllRentCar();
-        System.out.println("폐차할 자동차를 선택하세요");
+        printAllRentCar(); // 차량 목록
+        System.out.print("폐차할 차량ID를 입력하세요 : ");
         try {
-            Car.delete(sc.nextLine());
+            String carId = sc.nextLine();
+
+            // 해당 차량 검색
+            Car car = Car.findById(carId);
+            if (car == null) {
+                System.out.println(">> 해당 차량ID를 찾을 수 없습니다.");
+                return;
+            }
+
+            // 차량 삭제
+            Car.delete(carId);
+            System.out.println(car.getName() + " 차량이 폐차되었습니다.");
+
         } catch (IOException e) {
-            System.out.println(">>폐차 실패");
+            System.out.println(">> 폐차 실패: 파일 처리 오류");
+        } catch (Exception e) {
+            System.out.println(">> 폐차 실패: 시스템 오류");
         }
     }
 
+    // 등록된 차량 목록 출력
     private void printAllRentCar() {
         try {
             ArrayList<Car> cars = Car.findAll();
-
-            // 데이터가 비어있는 경우 처리
             if (cars.isEmpty()) {
                 System.out.println("등록된 차량이 없습니다.");
                 return;
             }
 
             System.out.println("\n=== 등록된 차량 목록 ===");
-            for (Car car : cars) { // 향상된 for문 사용
+            for (Car car : cars) {
                 System.out.println(car.toString());
             }
             System.out.println("=====================");
 
         } catch (IOException e) {
             System.out.println("데이터 접근에 실패했습니다: " + e.getMessage());
-            e.printStackTrace(); // 디버깅을 위한 스택 트레이스 출력
+            e.printStackTrace();
         }
     }
 
+    // 렌트카 등록
     private void addRentCar() {
-        System.out.println("차량 이름 : ");
+        System.out.print("차량 이름 : ");
         String name = sc.nextLine();
-        System.out.println("차량 종류 : ");
+        System.out.print("차량 종류 : ");
         String genre = sc.nextLine();
         Car car = new Car(name, genre);
         try {
