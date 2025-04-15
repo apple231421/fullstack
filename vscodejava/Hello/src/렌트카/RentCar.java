@@ -49,7 +49,6 @@ public class RentCar {
         this.isReturned = false;
     }
 
-    // Getter 메소드
     public long getId() {
         return id;
     }

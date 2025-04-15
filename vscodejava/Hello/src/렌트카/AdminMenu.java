@@ -5,6 +5,15 @@ import java.util.ArrayList;
 
 // 관리자 메뉴 클래스 (렌트카 등록/목록/폐차/현황 등 제공)
 public class AdminMenu extends AbstractMenu {
+    // 생성자: 메뉴 텍스트와 이전 메뉴 설정
+    public AdminMenu(Menu prevMenu) {
+        super(ADMIN_MENU_TEXT, prevMenu);
+    }
+
+    // 싱글톤 인스턴스 반환
+    public static AdminMenu getInstance() {
+        return instance;
+    }
 
     // 싱글톤 패턴 적용: 하나의 AdminMenu 인스턴스만 사용
     private static final AdminMenu instance = new AdminMenu(prevMenu);
@@ -15,16 +24,6 @@ public class AdminMenu extends AbstractMenu {
             "3: 렌트카 폐차하기\n" +
             "4: 렌트카 현황보기\n" +
             "5: 메인 메뉴로 이동\n";
-
-    // 생성자: 메뉴 텍스트와 이전 메뉴 설정
-    public AdminMenu(Menu prevMenu) {
-        super(ADMIN_MENU_TEXT, prevMenu);
-    }
-
-    // 싱글톤 인스턴스 반환
-    public static AdminMenu getInstance() {
-        return instance;
-    }
 
     // 사용자 입력에 따라 다음 메뉴 또는 기능 실행
     @Override
@@ -92,31 +91,24 @@ public class AdminMenu extends AbstractMenu {
         }
     }
 
-    // (현재는 미사용) 표 형태의 렌트카 현황 출력용 헤더
-    private void printHeader() {
-        System.out.println("\n=================================================");
-        System.out.println("                렌트카 현황 조회                  ");
-        System.out.println("=================================================");
-        System.out.printf("%-10s %-15s %8s %8s %10s%n",
-                "차량ID", "차종", "총수량", "대여중", "대여가능");
-        System.out.println("-------------------------------------------------");
-    }
+    
 
     // 차량 폐차 처리
     private void deleteCar() {
-        printAllRentCar(); // 차량 목록
-        System.out.print("폐차할 차량ID를 입력하세요 : ");
         try {
+            if (!printAllRentCar()) {
+                return; // 차량이 없으면 메뉴로 나감
+            }
+
+            System.out.print("폐차할 차량ID를 입력하세요 : ");
             String carId = sc.nextLine();
 
-            // 해당 차량 검색
             Car car = Car.findById(carId);
             if (car == null) {
                 System.out.println(">> 해당 차량ID를 찾을 수 없습니다.");
                 return;
             }
 
-            // 차량 삭제
             Car.delete(carId);
             System.out.println(car.getName() + " 차량이 폐차되었습니다.");
 
@@ -128,12 +120,12 @@ public class AdminMenu extends AbstractMenu {
     }
 
     // 등록된 차량 목록 출력
-    private void printAllRentCar() {
+    private boolean printAllRentCar() {
         try {
             ArrayList<Car> cars = Car.findAll();
             if (cars.isEmpty()) {
-                System.out.println("등록된 차량이 없습니다.");
-                return;
+                System.out.println(">> 등록된 차량이 없습니다. 메뉴로 돌아갑니다.");
+                return false;
             }
 
             System.out.println("\n=== 등록된 차량 목록 ===");
@@ -141,10 +133,12 @@ public class AdminMenu extends AbstractMenu {
                 System.out.println(car.toString());
             }
             System.out.println("=====================");
+            return true;
 
         } catch (IOException e) {
             System.out.println("데이터 접근에 실패했습니다: " + e.getMessage());
             e.printStackTrace();
+            return false;
         }
     }
 

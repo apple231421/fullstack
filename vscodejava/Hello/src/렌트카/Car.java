@@ -36,9 +36,9 @@ public class Car {
         this.genre = genre;
     }
 
-    // 신규 등록용 생성자: 고유 ID를 현재 시간(초)로 생성
+    // 신규 등록용 생성자: 고유 ID를 현재 시간(밀리초)로 생성
     public Car(String name, String genre) {
-        this.id = String.valueOf(Instant.now().getEpochSecond());
+        this.id = String.valueOf(Instant.now().toEpochMilli());
         this.name = name;
         this.genre = genre;
     }
@@ -60,6 +60,28 @@ public class Car {
         return String.format("%s,%s,%s", id, name, genre);
     }
 
+     // 기본 차량 목록 초기화 (중복 ID 방지용 sleep 추가)
+     public static void maincar() throws IOException, InterruptedException {
+        ArrayList<Car> cars = findAll();
+        if (cars.isEmpty()) {
+            System.out.println(">> 기본 차량 데이터를 초기화합니다.");
+
+            new Car("아반떼", "세단").save();
+            Thread.sleep(2);
+
+            new Car("카니발", "RV").save();
+            Thread.sleep(2);
+
+            new Car("소나타", "세단").save();
+            Thread.sleep(2);
+
+            new Car("람보르기니", "슈퍼카").save();
+            Thread.sleep(2);
+
+            new Car("붕붕이", "어린이자동차").save();
+        }
+    }
+
     // 차량 정보를 파일에 저장
     public void save() throws IOException {
         File parentDir = file.getParentFile();
@@ -72,16 +94,7 @@ public class Car {
         }
     }
 
-    public static void maincar() throws IOException {
-        ArrayList<Car> cars = findAll();
-        if (cars.isEmpty()) {
-            System.out.println(">> 기본 차량 데이터를 초기화합니다.");
-
-            new Car("아반떼", "세단").save();
-            new Car("카니발", "RV").save();
-            new Car("소나타", "세단").save();
-        }
-    }
+   
 
     // 파일에서 모든 차량 목록 불러오기
     public static ArrayList<Car> findAll() throws IOException {
@@ -144,4 +157,6 @@ public class Car {
     public String toString() {
         return String.format("차량ID: %s, 차종: %s, 종류: %s", id, name, genre);
     }
+
+    
 }

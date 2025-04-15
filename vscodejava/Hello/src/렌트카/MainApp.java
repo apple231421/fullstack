@@ -10,7 +10,7 @@ public class MainApp {
         // 기본 차량 데이터가 없으면 최초 1회 실행
         try {
             Car.maincar();
-        } catch (IOException e) {
+        } catch (IOException | InterruptedException e) {
             System.out.println("기본 차량 초기화 실패: " + e.getMessage());
         }
 

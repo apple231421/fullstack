@@ -10,20 +10,20 @@ public class Count {
 
     public Count(ArrayList<RentCar> rentCars) {
         this.rentCars = rentCars;
-        this.totalCount = 10; // 초기 총 차량 수를 5대로 설정
-        
+        this.totalCount = 10; // 초기 총 차량 수를 10대로 설정
+
         // rentCars가 null인 경우 처리
         if (rentCars == null) {
             this.rentedCount = 0;
         } else {
-            this.rentedCount = calculateRentedCount(rentCars);
+            this.rentedCount = totalRentedCount(rentCars);
         }
-        
+
         this.availableCount = this.totalCount - this.rentedCount;
     }
 
     // 현재 대여된 총 수량 계산
-    private int calculateRentedCount(ArrayList<RentCar> rentCars) {
+    private int totalRentedCount(ArrayList<RentCar> rentCars) {
         int total = 0;
         for (RentCar car : rentCars) {
             if (car != null && !car.isReturned()) {
@@ -84,7 +84,6 @@ public class Count {
         return count > 0 && availableCount >= count;
     }
 
-    
     public int getTotalCount() {
         return totalCount;
     }

@@ -16,10 +16,9 @@ class MainMenu extends AbstractMenu {
 
     // 메인 메뉴 출력 텍스트
     private static final String MAIN_MENU_TEXT = "1. 렌트카 대여하기\n" +
-            "2. 렌트카 대여확인하기\n" +
-            "3. 렌트카 반납하기\n" +
-            "4. 렌트카 대여 확인증 발급하기\n" +
-            "5. 관리자 모드\n" +
+            "2. 렌트카 반납하기\n" +
+            "3. 렌트카 대여 확인증 발급하기\n" +
+            "4. 관리자 모드\n" +
             "0. 종료\n";
 
     // 생성자
@@ -35,15 +34,12 @@ class MainMenu extends AbstractMenu {
                 Rent(); // 차량 대여
                 return this;
             case "2":
-                checkRent(); // 대여 현황 확인
-                return this;
-            case "3":
                 ReturnCar(); // 차량 반납
                 return this;
-            case "4":
+            case "3":
                 RentCarTicketPrint(); // 대여 티켓 출력
                 return this;
-            case "5":
+            case "4":
                 if (!CheckAdminPW()) { // 관리자 모드 진입
                     System.out.println(">> 비밀번호가 틀렸습니다.");
                     return this;
@@ -81,7 +77,7 @@ class MainMenu extends AbstractMenu {
             System.out.println("\n==========================================");
             System.out.println("           렌트카 이용 티켓             ");
             System.out.println("==========================================");
-            System.out.println("발급번호: " + rentCar.getId());
+            System.out.println("렌트번호: " + rentCar.getId());
             System.out.println("차량ID: " + rentCar.getCarId());
             System.out.println("차종: " + rentCar.getCarName());
             System.out.println("대여 수량: " + rentCar.getCarcount() + "대");
@@ -101,7 +97,7 @@ class MainMenu extends AbstractMenu {
     private void ReturnCar() {
         try {
             System.out.println("\n=== 렌트카 반납 ===");
-            System.out.print("반납할 차량의 발급 번호를 입력하세요: ");
+            System.out.print("반납할 차량의 렌트번호를 입력하세요: ");
             String rentIdStr = sc.nextLine();
 
             RentCar rentCar = RentCar.findByRentId(rentIdStr);
@@ -110,7 +106,9 @@ class MainMenu extends AbstractMenu {
                 return;
             }
 
-            ArrayList<RentCar> allRentCars = RentCar.findByCarId(String.valueOf(rentCar.getCarId()));
+            ArrayList<RentCar> allRentCars = RentCar.findByCarId(String.valueOf(rentCar.getCarId())); // valueOf(rentCar.getCarId())
+                                                                                                      // 가져온 값을 string
+                                                                                                      // 타입이르 전환
             Count count = new Count(allRentCars);
 
             int returnCount = Integer.parseInt(rentCar.getCarcount());
@@ -121,7 +119,7 @@ class MainMenu extends AbstractMenu {
 
             System.out.println("\n=== 반납이 완료되었습니다 ===");
             System.out.println("차량명: " + rentCar.getCarName());
-            System.out.println("반납 수량: " + returnCount);
+            System.out.println("반납 수량: " + returnCount + "대");
             count.show(); // 현황 출력
 
         } catch (IOException e) {
@@ -130,55 +128,6 @@ class MainMenu extends AbstractMenu {
             System.out.println(">> 수량 정보 처리 중 오류가 발생했습니다.");
         } catch (Exception e) {
             System.out.println(">> 반납 처리 중 오류가 발생했습니다: " + e.getMessage());
-        }
-    }
-
-    // 대여 현황 확인
-    private void checkRent() {
-        System.out.println("\n=== 차량 대여 현황 확인 ===");
-        System.out.print("차량 ID를 입력해주세요: ");
-        String carId = sc.nextLine().trim();
-
-        if (carId.isEmpty()) {
-            System.out.println(">> 차량 ID를 반드시 입력해주세요.");
-            return;
-        }
-
-        try {
-            Car car = Car.findById(carId);
-            if (car == null) {
-                System.out.println(">> 존재하지 않는 차량 ID입니다.");
-                return;
-            }
-
-            ArrayList<RentCar> rentCars = RentCar.findByCarId(carId);
-            Count count = new Count(rentCars);
-
-            // 현황 출력
-            System.out.println("\n=== 차량 대여 현황 ===");
-            System.out.println("차량 ID: " + car.getId());
-            System.out.println("차량 이름: " + car.getName());
-            System.out.println("현재 대여중: " + count.getRentedCount() + "대");
-            System.out.println("대여 가능: " + count.getAvailableCount() + "대");
-            System.out.println("===================");
-
-            // 현재 대여 중인 목록 출력
-            if (!rentCars.isEmpty()) {
-                System.out.println("\n=== 현재 대여 중인 내역 ===");
-                for (RentCar rentCar : rentCars) {
-                    if (!rentCar.isReturned()) {
-                        System.out.printf("발급번호: %s, 대여수량: %s대%n",
-                                rentCar.getId(),
-                                rentCar.getCarcount());
-                    }
-                }
-                System.out.println("===================");
-            }
-
-        } catch (IOException e) {
-            System.out.println(">> 정보 조회 중 파일 처리 오류가 발생했습니다.");
-        } catch (Exception e) {
-            System.out.println(">> 시스템 오류가 발생했습니다.");
         }
     }
 
@@ -197,7 +146,7 @@ class MainMenu extends AbstractMenu {
                 System.out.println(car.toString());
             }
 
-            System.out.print("렌트할 차량의 ID를 입력해주세요: ");
+            System.out.print("\n렌트할 차량의 ID를 입력해주세요: ");
             String carIdStr = sc.nextLine();
 
             Car selectedCar = Car.findById(carIdStr);
@@ -233,6 +182,7 @@ class MainMenu extends AbstractMenu {
                 count.show(); // 최신 재고 출력
             } else {
                 System.out.println(">> 대여 가능한 수량을 초과하였습니다.");
+                System.out.printf(">> 현재 남은 수량은 %d대입니다.\n", count.getAvailableCount());
             }
 
         } catch (NumberFormatException e) {
