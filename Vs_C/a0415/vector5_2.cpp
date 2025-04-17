@@ -5,8 +5,8 @@ using namespace std;
 int main()
 {
     vector<string> cars = {"vol", "bmw", "ford", "mazda"};
-
     cars.pop_back();
+    
     for (string car : cars)
     {
         cout << car << "\n";

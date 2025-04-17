@@ -6,10 +6,10 @@ int main()
 {
     vector<string> cars = {"Volvo", "BMW", "Ford"};
 
-    // 요소 추가
+    // 요소 추가 맨뒤에 추가
     cars.push_back("Mazda"); // { "Volvo", "BMW", "Ford", "Mazda" }
 
-    // 요소 삭제
+    // 요소 삭제 마지막요소 삭제
     cars.pop_back(); // { "Volvo", "BMW", "Ford" }
 
     // 특정 위치에 요소 삽입
